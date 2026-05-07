@@ -1,0 +1,1993 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>A Formal Proposal — Sultanate of Oman Ministry of Heritage &amp; Tourism</title>
+  <meta name="description" content="A formal proposal to the Ministry of Heritage and Tourism, Sultanate of Oman, from India's premier hospitality management group — presenting 16 properties and a proven track record in multi-cultural, multi-faith hospitality." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&family=Inter:wght@300;400;500;600&family=Amiri:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
+  <style>
+    /* ================================================================
+       DESIGN TOKENS — Oman Heritage Palette
+       Deep Kohl + Antique Gold + Omani Sand + Emerald Archway
+    ================================================================ */
+    :root {
+      /* Surfaces — dark kohl / soot / ancient ink */
+      --bg:          #0a0806;
+      --surface:     #0f0c08;
+      --surface-2:   #141008;
+      --surface-3:   #1a1510;
+      --border:      #2c2418;
+      --divider:     #211c12;
+
+      /* Text */
+      --text:        #f2ead8;
+      --text-muted:  #9e8e6e;
+      --text-faint:  #56493a;
+      --text-inv:    #0a0806;
+
+      /* Antique Gold — Omani Khanjar ornament */
+      --gold:        #c9a84c;
+      --gold-lt:     #e2c472;
+      --gold-dk:     #8a6f28;
+      --gold-bg:     #1e1708;
+
+      /* Omani Emerald — archway, tiles, haram doors */
+      --emerald:     #1b5e40;
+      --emerald-lt:  #267a55;
+      --emerald-bg:  #0c1f15;
+
+      /* Omani Red — khanjar sash, national flag */
+      --red:         #b5161c;
+
+      /* Sand / Stone — Mutrah corniche walls */
+      --sand:        #d4c09a;
+      --sand-dk:     #8a7250;
+
+      /* Type scale */
+      --t-xs:   clamp(0.72rem, 0.68rem + 0.2vw, 0.82rem);
+      --t-sm:   clamp(0.85rem, 0.78rem + 0.32vw, 1rem);
+      --t-base: clamp(1rem,    0.94rem + 0.28vw, 1.13rem);
+      --t-lg:   clamp(1.13rem, 1rem    + 0.7vw,  1.5rem);
+      --t-xl:   clamp(1.5rem,  1.2rem  + 1.2vw,  2.25rem);
+      --t-2xl:  clamp(2rem,    1.2rem  + 2.5vw,  3.5rem);
+      --t-3xl:  clamp(2.5rem,  1rem    + 4vw,    5rem);
+      --t-hero: clamp(3rem,    0.5rem  + 7vw,    8rem);
+
+      /* Spacing */
+      --s1:  0.25rem; --s2:  0.5rem;  --s3:  0.75rem; --s4: 1rem;
+      --s5:  1.25rem; --s6:  1.5rem;  --s8:  2rem;    --s10:2.5rem;
+      --s12: 3rem;    --s16: 4rem;    --s20: 5rem;    --s24:6rem; --s32:8rem;
+
+      /* Radii */
+      --r-sm: 0.25rem; --r-md: 0.5rem; --r-lg: 0.875rem; --r-xl: 1.25rem; --r-full: 9999px;
+
+      /* Shadows */
+      --glow:   0 0 48px rgba(201,168,76,0.12);
+      --glow-sm:0 0 20px rgba(201,168,76,0.08);
+      --card:   0 8px 48px rgba(0,0,0,0.7);
+
+      /* Transitions */
+      --ease: 220ms cubic-bezier(0.16,1,0.3,1);
+
+      /* Fonts */
+      --f-display: 'Cinzel', 'Georgia', serif;
+      --f-serif:   'Playfair Display', 'Georgia', serif;
+      --f-arabic:  'Amiri', 'Georgia', serif;
+      --f-body:    'Inter', 'Helvetica Neue', sans-serif;
+
+      /* Layout */
+      --wide: 1340px; --def: 1020px; --narrow: 700px;
+    }
+
+    /* ================================================================
+       RESET & BASE
+    ================================================================ */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { -webkit-font-smoothing: antialiased; scroll-behavior: smooth; scroll-padding-top: 72px; }
+    body {
+      font-family: var(--f-body);
+      font-size: var(--t-base);
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.65;
+      min-height: 100dvh;
+    }
+    img, video { display: block; max-width: 100%; height: auto; }
+    h1,h2,h3,h4,h5,h6 { text-wrap: balance; line-height: 1.15; }
+    p, li { text-wrap: pretty; }
+    button { cursor: pointer; background: none; border: none; font: inherit; color: inherit; }
+    a { color: inherit; }
+
+    /* ================================================================
+       UTILITY
+    ================================================================ */
+    .container { width: 100%; max-width: var(--wide); margin-inline: auto; padding-inline: var(--s8); }
+    .container--def  { max-width: var(--def); }
+    .container--narr { max-width: var(--narrow); }
+    .gold { color: var(--gold); }
+    .sand { color: var(--sand); }
+    .emerald { color: var(--emerald-lt); }
+    .italic { font-style: italic; }
+    .sr-only { position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0; }
+
+    /* Section rhythm */
+    section { padding-block: clamp(var(--s16), 8vw, var(--s32)); }
+
+    /* Section label */
+    .s-label {
+      display: inline-flex; align-items: center; gap: var(--s3);
+      font-family: var(--f-display); font-size: var(--t-xs);
+      letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold);
+      margin-bottom: var(--s4);
+    }
+    .s-label::before { content:''; display:block; width:28px; height:1px; background:var(--gold); }
+
+    /* Section title */
+    .s-title {
+      font-family: var(--f-serif); font-size: var(--t-2xl);
+      font-weight: 400; color: var(--text); margin-bottom: var(--s5);
+    }
+    .s-sub {
+      font-family: var(--f-serif); font-size: var(--t-lg);
+      color: var(--text-muted); font-weight: 300; max-width: 64ch;
+      margin-bottom: var(--s10); line-height: 1.7;
+    }
+
+    /* ================================================================
+       ISLAMIC GEOMETRIC PATTERN (SVG inline via CSS background)
+    ================================================================ */
+    .geo-bg {
+      background-image: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%23c9a84c' stroke-width='0.4' opacity='0.12'%3E%3Cpolygon points='40,4 52,16 76,16 76,40 52,64 40,76 28,64 4,40 4,16 28,16'/%3E%3Cpolygon points='40,16 50,24 64,24 64,40 50,56 40,64 30,56 16,40 16,24 30,24'/%3E%3Cline x1='40' y1='4' x2='40' y2='16'/%3E%3Cline x1='40' y1='64' x2='40' y2='76'/%3E%3Cline x1='4' y1='40' x2='16' y2='40'/%3E%3Cline x1='64' y1='40' x2='76' y2='40'/%3E%3C/g%3E%3C/svg%3E");
+      background-size: 80px 80px;
+    }
+
+    /* ================================================================
+       NAVIGATION
+    ================================================================ */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 200;
+      background: rgba(10,8,6,0.88); backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border);
+      padding: var(--s4) var(--s8);
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .nav-brand { display: flex; align-items: center; gap: var(--s3); text-decoration: none; }
+    .nav-brand svg { width: 34px; height: 34px; }
+    .nav-brand-text { font-family: var(--f-display); font-size: var(--t-xs); color: var(--gold); letter-spacing: 0.08em; }
+    .nav-links { display: flex; gap: var(--s5); list-style: none; }
+    .nav-links a { text-decoration: none; font-size: var(--t-xs); letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-muted); transition: color var(--ease); font-family: var(--f-display); }
+    .nav-links a:hover { color: var(--gold); }
+    .nav-badge { background: var(--emerald); color: #fff; font-size: 0.6rem; padding: 2px 9px; border-radius: var(--r-full); letter-spacing: 0.1em; text-transform: uppercase; font-family: var(--f-display); font-weight: 600; }
+    @media (max-width: 860px) { .nav-links { display: none; } }
+
+    /* ================================================================
+       OMAN FLAG STRIPE
+    ================================================================ */
+    .flag-stripe {
+      height: 3px;
+      background: linear-gradient(to right,
+        var(--red) 0%,   var(--red) 33.3%,
+        #fff 33.3%,      #fff 66.6%,
+        var(--emerald) 66.6%
+      );
+    }
+
+    /* ================================================================
+       HERO
+    ================================================================ */
+    .hero {
+      position: relative; min-height: 100vh;
+      display: flex; align-items: center; justify-content: center;
+      text-align: center; overflow: hidden;
+      padding-top: 72px;
+    }
+    .hero-bg {
+      position: absolute; inset: 0; z-index: 0;
+      background:
+        linear-gradient(to bottom, rgba(10,8,6,0.4) 0%, rgba(10,8,6,0.6) 50%, rgba(10,8,6,0.97) 100%),
+        url('hero-oman.jpg') center/cover no-repeat;
+    }
+    .hero-pattern {
+      position: absolute; inset: 0; z-index: 1; opacity: 0.06;
+      background-image: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%23c9a84c' stroke-width='0.4'%3E%3Cpolygon points='40,4 52,16 76,16 76,40 52,64 40,76 28,64 4,40 4,16 28,16'/%3E%3Cpolygon points='40,16 50,24 64,24 64,40 50,56 40,64 30,56 16,40 16,24 30,24'/%3E%3C/g%3E%3C/svg%3E");
+      background-size: 80px 80px;
+    }
+    .hero-content { position: relative; z-index: 2; max-width: 960px; padding: var(--s12) var(--s8); }
+
+    /* Arabic bismillah-style opener */
+    .hero-arabic {
+      font-family: var(--f-arabic); font-size: var(--t-xl);
+      color: var(--gold); opacity: 0.85; margin-bottom: var(--s6);
+      letter-spacing: 0.05em; direction: rtl;
+    }
+    .hero-eyebrow {
+      display: inline-flex; align-items: center; gap: var(--s3);
+      border: 1px solid rgba(201,168,76,0.35); border-radius: var(--r-full);
+      padding: var(--s2) var(--s5); margin-bottom: var(--s8);
+      font-family: var(--f-display); font-size: var(--t-xs); letter-spacing: 0.18em;
+      text-transform: uppercase; color: var(--gold);
+    }
+    .hero-eyebrow-dot { width: 5px; height: 5px; border-radius: 50%; background: var(--gold); }
+    .hero-title {
+      font-family: var(--f-display); font-size: var(--t-hero);
+      font-weight: 600; color: #f5ead0; margin-bottom: var(--s4);
+      text-shadow: 0 4px 32px rgba(0,0,0,0.9);
+      letter-spacing: 0.04em;
+    }
+    .hero-title-sub {
+      font-family: var(--f-serif); font-size: var(--t-xl);
+      font-weight: 400; font-style: italic; color: var(--gold);
+      margin-bottom: var(--s8); line-height: 1.4;
+    }
+    .hero-divider { display: flex; align-items: center; justify-content: center; gap: var(--s4); margin-bottom: var(--s10); }
+    .hero-div-line { width: 60px; height: 1px; background: linear-gradient(to right, transparent, var(--gold)); }
+    .hero-div-line.rev { background: linear-gradient(to left, transparent, var(--gold)); }
+    .hero-ornament { color: var(--gold); font-size: var(--t-xl); }
+
+    /* Hero stats */
+    .hero-stats { display: flex; justify-content: center; gap: var(--s8); flex-wrap: wrap; }
+    .h-stat { display: flex; flex-direction: column; align-items: center; gap: var(--s2); }
+    .h-stat-num { font-family: var(--f-display); font-size: var(--t-2xl); color: var(--gold); font-weight: 600; line-height: 1; }
+    .h-stat-label { font-size: var(--t-xs); color: var(--text-muted); letter-spacing: 0.12em; text-transform: uppercase; font-family: var(--f-display); }
+    .h-stat-sep { width: 1px; height: 52px; background: var(--border); align-self: center; }
+
+    .hero-scroll { position: absolute; bottom: var(--s8); left: 50%; transform: translateX(-50%); z-index: 2; display: flex; flex-direction: column; align-items: center; gap: var(--s2); }
+    .hero-scroll span { font-family: var(--f-display); font-size: var(--t-xs); color: var(--text-faint); letter-spacing: 0.18em; text-transform: uppercase; }
+    .scroll-bar { width: 1px; height: 40px; background: linear-gradient(to bottom, var(--gold), transparent); animation: pulse 2s ease-in-out infinite; }
+    @keyframes pulse { 0%,100%{opacity:0.3;transform:scaleY(0.5)} 50%{opacity:1;transform:scaleY(1)} }
+
+    /* ================================================================
+       ORNAMENTAL DIVIDER
+    ================================================================ */
+    .orn-div {
+      display: flex; align-items: center; justify-content: center; gap: var(--s4);
+      padding: var(--s6) 0;
+    }
+    .orn-line { flex: 1; max-width: 240px; height: 1px; background: linear-gradient(to right, transparent, var(--border), transparent); }
+    .orn-center { color: var(--gold); font-size: var(--t-lg); opacity: 0.55; }
+
+    /* Khanjar SVG divider (inline) */
+    .khanjar-div {
+      display: flex; align-items: center; justify-content: center; gap: var(--s4);
+      padding: var(--s8) 0;
+    }
+    .khanjar-line { flex: 1; max-width: 180px; height: 1px;
+      background: linear-gradient(to right, transparent, rgba(201,168,76,0.4), transparent); }
+
+    /* ================================================================
+       EXECUTIVE SUMMARY
+    ================================================================ */
+    .exec-section { background: var(--surface); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+    .exec-grid { display: grid; grid-template-columns: 1fr 1fr; gap: var(--s16); align-items: start; }
+    .exec-body { color: var(--text-muted); line-height: 1.85; }
+    .exec-body p { margin-bottom: var(--s5); max-width: 60ch; }
+    .exec-body strong { color: var(--gold); font-weight: 500; }
+    .exec-highlights { display: flex; flex-direction: column; gap: var(--s5); }
+    .h-card {
+      border: 1px solid var(--border); border-radius: var(--r-lg);
+      padding: var(--s5) var(--s6); background: var(--surface-2);
+      position: relative; overflow: hidden;
+    }
+    .h-card::before { content:''; position:absolute; top:0; left:0; width:3px; height:100%; background:linear-gradient(to bottom, var(--gold), transparent); }
+    .h-card-num { font-family: var(--f-display); font-size: var(--t-2xl); color: var(--gold); font-weight: 600; line-height:1; margin-bottom: var(--s2); }
+    .h-card-title { font-size: var(--t-sm); color: var(--text); font-weight: 500; margin-bottom: var(--s1); }
+    .h-card-desc { font-size: var(--t-xs); color: var(--text-muted); line-height: 1.65; }
+    @media (max-width:768px) { .exec-grid { grid-template-columns:1fr; gap:var(--s10); } }
+
+    /* ================================================================
+       OMAN MARKET SECTION
+    ================================================================ */
+    .oman-sect { position: relative; overflow: hidden; }
+    .oman-glow { position: absolute; top:-120px; right:-200px; width:600px; height:600px; background: radial-gradient(circle, rgba(27,94,64,0.1) 0%, transparent 70%); pointer-events:none; }
+
+    .stat-grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(190px,1fr)); gap: var(--s4); margin-bottom: var(--s12); }
+    .stat-card {
+      background: var(--surface); border: 1px solid var(--border); border-radius: var(--r-lg);
+      padding: var(--s6); text-align: center; position: relative; overflow: hidden;
+      transition: border-color var(--ease), box-shadow var(--ease);
+    }
+    .stat-card:hover { border-color: var(--gold); box-shadow: var(--glow-sm); }
+    .stat-card::after { content:''; position:absolute; bottom:0; left:0; right:0; height:2px; background:linear-gradient(to right, transparent, var(--emerald-lt), transparent); }
+    .stat-value { font-family: var(--f-display); font-size: var(--t-2xl); color: var(--gold); font-weight:600; line-height:1; margin-bottom: var(--s2); }
+    .stat-label { font-family: var(--f-display); font-size: var(--t-xs); color: var(--text-muted); letter-spacing: 0.1em; text-transform: uppercase; }
+    .stat-src { font-size: 0.62rem; color: var(--text-faint); margin-top: var(--s2); }
+
+    /* 2-col layout */
+    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: var(--s12); align-items: start; }
+    .img-block {
+      border-radius: var(--r-xl); overflow: hidden; position: relative;
+      aspect-ratio: 4/3; box-shadow: var(--card);
+    }
+    .img-block img { width:100%; height:100%; object-fit:cover; }
+    .img-caption {
+      position: absolute; bottom:0; left:0; right:0;
+      background: linear-gradient(to top, rgba(10,8,6,0.95), transparent);
+      padding: var(--s6) var(--s5) var(--s4);
+      font-family: var(--f-display); font-size: var(--t-xs); color: var(--text-muted); letter-spacing:0.06em;
+    }
+
+    .why-list { display: flex; flex-direction: column; gap: var(--s5); }
+    .why-item { display: flex; gap: var(--s4); align-items: flex-start; }
+    .why-icon {
+      width:36px; height:36px; border-radius: var(--r-md);
+      background: var(--gold-bg); border: 1px solid rgba(201,168,76,0.25);
+      display: flex; align-items: center; justify-content: center;
+      font-size: var(--t-sm); flex-shrink: 0; margin-top: 2px;
+    }
+    .why-text h4 { font-family: var(--f-body); font-size: var(--t-base); font-weight: 600; color: var(--text); margin-bottom: var(--s1); }
+    .why-text p { font-size: var(--t-sm); color: var(--text-muted); line-height:1.72; max-width: 44ch; }
+    @media (max-width:768px) { .two-col { grid-template-columns:1fr; } }
+
+    /* ================================================================
+       CEPA / RELATIONS BAND
+    ================================================================ */
+    .rel-band { background: linear-gradient(135deg, var(--surface) 0%, var(--surface-2) 100%); border-top:1px solid var(--border); border-bottom:1px solid var(--border); }
+    .cepa-box {
+      border: 1px solid rgba(201,168,76,0.25); border-radius: var(--r-xl);
+      padding: var(--s10); background: var(--gold-bg);
+      position: relative; overflow: hidden; margin-bottom: var(--s10);
+    }
+    .cepa-box::before { content:'"'; position:absolute; top:-24px; left:var(--s6); font-family:var(--f-serif); font-size:130px; color:rgba(201,168,76,0.07); line-height:1; }
+    .cepa-title { font-family: var(--f-display); font-size: var(--t-xl); color: var(--gold); margin-bottom: var(--s4); }
+    .cepa-body { font-size: var(--t-base); color: var(--text-muted); line-height:1.82; max-width:68ch; margin-bottom: var(--s6); }
+    .cepa-points { display: grid; grid-template-columns:1fr 1fr; gap: var(--s4); }
+    .cepa-point { display:flex; align-items:flex-start; gap:var(--s3); font-size:var(--t-sm); color:var(--text-muted); }
+    .cepa-dot { width:6px; height:6px; border-radius:50%; background:var(--gold); margin-top:6px; flex-shrink:0; }
+    @media (max-width:600px) { .cepa-points { grid-template-columns:1fr; } }
+
+    /* Timeline */
+    .timeline { display:flex; flex-direction:column; gap: var(--s5); }
+    .tl-item { display:flex; gap: var(--s6); }
+    .tl-left { display:flex; flex-direction:column; align-items:center; }
+    .tl-dot { width:11px; height:11px; border-radius:50%; background:var(--gold); border:2px solid var(--bg); flex-shrink:0; margin-top:5px; }
+    .tl-line { flex:1; width:1px; background:var(--border); margin:var(--s2) 0; }
+    .tl-content { flex:1; padding-bottom: var(--s6); }
+    .tl-year { font-family:var(--f-display); font-size:var(--t-xs); color:var(--gold); letter-spacing:0.12em; text-transform:uppercase; margin-bottom:var(--s1); }
+    .tl-title { font-family:var(--f-serif); font-size:var(--t-base); color:var(--text); margin-bottom:var(--s2); font-weight:500; }
+    .tl-desc { font-size:var(--t-sm); color:var(--text-muted); line-height:1.75; }
+
+    /* ================================================================
+       INTERNATIONAL CREDENTIALS — HIGHLIGHT BAND
+    ================================================================ */
+    .intl-section {
+      background: linear-gradient(135deg, var(--emerald-bg) 0%, var(--surface) 60%, var(--emerald-bg) 100%);
+      border-top: 1px solid rgba(27,94,64,0.4);
+      border-bottom: 1px solid rgba(27,94,64,0.4);
+      position: relative; overflow: hidden;
+    }
+    .intl-geo {
+      position: absolute; inset: 0; opacity: 0.04;
+      background-image: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%231b5e40' stroke-width='0.6'%3E%3Cpolygon points='40,4 52,16 76,16 76,40 52,64 40,76 28,64 4,40 4,16 28,16'/%3E%3C/g%3E%3C/svg%3E");
+      background-size: 80px 80px;
+    }
+    .intl-banner {
+      border: 1px solid rgba(27,94,64,0.5); border-radius: var(--r-xl);
+      padding: var(--s10); background: rgba(27,94,64,0.08);
+      margin-bottom: var(--s10); text-align: center;
+    }
+    .intl-banner-title { font-family: var(--f-display); font-size: var(--t-2xl); color: var(--emerald-lt); margin-bottom: var(--s4); letter-spacing: 0.04em; }
+    .intl-banner-sub { font-family: var(--f-serif); font-size: var(--t-lg); color: var(--text-muted); font-weight: 300; font-style: italic; max-width: 62ch; margin-inline: auto; margin-bottom: var(--s6); line-height: 1.7; }
+    .intl-banner-desc { font-size: var(--t-base); color: var(--text-muted); line-height: 1.85; max-width: 72ch; margin-inline: auto; }
+    .intl-banner-desc strong { color: var(--gold); }
+
+    /* Iraq Residences grid */
+    .iraq-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--s6); margin-bottom: var(--s10); }
+    .iraq-card {
+      border: 1px solid rgba(27,94,64,0.4); border-radius: var(--r-xl);
+      overflow: hidden; background: var(--surface-2);
+      transition: border-color var(--ease), box-shadow var(--ease), transform var(--ease);
+    }
+    .iraq-card:hover { border-color: var(--emerald-lt); box-shadow: 0 0 32px rgba(27,94,64,0.2); transform: translateY(-3px); }
+    .iraq-img { aspect-ratio: 4/3; overflow: hidden; position: relative; background: var(--surface-3); }
+    .iraq-img img { width:100%; height:100%; object-fit:cover; transition: transform 0.6s cubic-bezier(0.16,1,0.3,1); }
+    .iraq-card:hover .iraq-img img { transform: scale(1.05); }
+    .iraq-shrine-badge {
+      position: absolute; top: var(--s3); left: var(--s3);
+      background: rgba(10,8,6,0.9); backdrop-filter: blur(8px);
+      border: 1px solid rgba(27,94,64,0.5); border-radius: var(--r-full);
+      padding: var(--s1) var(--s3); font-family: var(--f-display);
+      font-size: 0.6rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--emerald-lt);
+    }
+    .iraq-loc-badge {
+      position: absolute; bottom: var(--s3); right: var(--s3);
+      background: var(--gold); color: var(--bg); font-family: var(--f-display);
+      font-size: 0.6rem; font-weight: 600; padding: var(--s1) var(--s3);
+      border-radius: var(--r-full); letter-spacing: 0.08em; text-transform: uppercase;
+    }
+    .iraq-body { padding: var(--s5) var(--s6) var(--s6); }
+    .iraq-num { font-family: var(--f-display); font-size: var(--t-xs); color: var(--text-faint); letter-spacing: 0.2em; text-transform: uppercase; margin-bottom: var(--s2); }
+    .iraq-name { font-family: var(--f-display); font-size: var(--t-lg); color: var(--emerald-lt); margin-bottom: var(--s2); font-weight: 500; line-height: 1.2; }
+    .iraq-loc { font-size: var(--t-xs); color: var(--text-faint); margin-bottom: var(--s3); letter-spacing: 0.06em; }
+    .iraq-desc { font-size: var(--t-sm); color: var(--text-muted); line-height: 1.75; margin-bottom: var(--s4); }
+    .iraq-specs { display: grid; grid-template-columns: 1fr 1fr; gap: var(--s3); margin-bottom: var(--s4); }
+    .iraq-spec { background: var(--surface-3); border-radius: var(--r-md); padding: var(--s3); text-align: center; }
+    .iraq-spec-num { font-family: var(--f-display); font-size: var(--t-lg); color: var(--gold); font-weight:600; line-height:1; }
+    .iraq-spec-label { font-size: 0.62rem; color: var(--text-faint); letter-spacing: 0.08em; text-transform: uppercase; margin-top: 2px; }
+    .iraq-chips { display: flex; flex-wrap: wrap; gap: var(--s2); }
+    .chip {
+      border: 1px solid var(--border); border-radius: var(--r-full);
+      padding: 2px var(--s3); font-size: 0.62rem; letter-spacing: 0.08em;
+      text-transform: uppercase; color: var(--text-muted); background: var(--surface);
+    }
+    .chip.em { border-color: rgba(27,94,64,0.4); color: var(--emerald-lt); background: var(--emerald-bg); }
+    .chip.gd { border-color: rgba(201,168,76,0.35); color: var(--gold); background: var(--gold-bg); }
+
+    @media (max-width: 900px) { .iraq-grid { grid-template-columns: 1fr 1fr; } }
+    @media (max-width: 600px) { .iraq-grid { grid-template-columns: 1fr; } }
+
+    /* Why it matters */
+    .intl-insight {
+      background: rgba(201,168,76,0.06); border: 1px solid rgba(201,168,76,0.2);
+      border-radius: var(--r-xl); padding: var(--s8);
+    }
+    .intl-insight-title { font-family: var(--f-display); font-size: var(--t-xl); color: var(--gold); margin-bottom: var(--s5); }
+    .intl-insight-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--s6); }
+    .insight-item { }
+    .insight-icon { font-size: 1.8rem; margin-bottom: var(--s3); opacity: 0.8; }
+    .insight-title { font-family: var(--f-display); font-size: var(--t-sm); color: var(--gold); margin-bottom: var(--s2); letter-spacing: 0.04em; }
+    .insight-desc { font-size: var(--t-sm); color: var(--text-muted); line-height: 1.72; }
+    @media (max-width:768px) { .intl-insight-grid { grid-template-columns: 1fr 1fr; } }
+    @media (max-width:480px) { .intl-insight-grid { grid-template-columns: 1fr; } }
+
+    /* ================================================================
+       INDIA PORTFOLIO SECTION
+    ================================================================ */
+    .portfolio-sect { background: var(--surface); }
+
+    /* Tab nav */
+    .tab-nav {
+      display: flex; gap: var(--s2); overflow-x: auto; padding-bottom: var(--s2);
+      border-bottom: 1px solid var(--border); margin-bottom: var(--s10);
+      scrollbar-width: none;
+    }
+    .tab-nav::-webkit-scrollbar { display: none; }
+    .tab-btn {
+      flex-shrink: 0; padding: var(--s3) var(--s5);
+      background: none; border: 1px solid transparent; border-radius: var(--r-md);
+      color: var(--text-muted); font-family: var(--f-display);
+      font-size: var(--t-xs); letter-spacing: 0.1em; text-transform: uppercase;
+      transition: all var(--ease); white-space: nowrap;
+    }
+    .tab-btn:hover { color: var(--text); border-color: var(--border); }
+    .tab-btn.active { color: var(--gold); border-color: var(--gold); background: var(--gold-bg); }
+    .tab-panel { display: none; }
+    .tab-panel.active { display: block; }
+
+    /* Property grid */
+    .prop-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(330px, 1fr)); gap: var(--s6); }
+    .prop-card {
+      border: 1px solid var(--border); border-radius: var(--r-xl); overflow: hidden;
+      background: var(--surface-2);
+      transition: border-color var(--ease), box-shadow var(--ease), transform var(--ease);
+    }
+    .prop-card:hover { border-color: rgba(201,168,76,0.35); box-shadow: var(--glow-sm); transform: translateY(-2px); }
+    .prop-img { aspect-ratio: 16/10; overflow: hidden; position: relative; background: var(--surface-3); }
+    .prop-img img { width:100%; height:100%; object-fit:cover; transition: transform 0.6s cubic-bezier(0.16,1,0.3,1); }
+    .prop-card:hover .prop-img img { transform: scale(1.05); }
+    .prop-tag {
+      position: absolute; top: var(--s3); left: var(--s3);
+      background: rgba(10,8,6,0.88); backdrop-filter: blur(8px);
+      border: 1px solid var(--border); border-radius: var(--r-full);
+      padding: 2px var(--s3); font-family: var(--f-display);
+      font-size: 0.6rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-muted);
+    }
+    .prop-tag.gold { border-color: rgba(201,168,76,0.4); color: var(--gold); }
+    .prop-body { padding: var(--s5) var(--s6) var(--s6); }
+    .prop-num { font-family: var(--f-display); font-size: var(--t-xs); color: var(--text-faint); letter-spacing: 0.2em; text-transform: uppercase; margin-bottom: var(--s2); }
+    .prop-name { font-family: var(--f-serif); font-size: var(--t-lg); color: var(--text); margin-bottom: var(--s3); font-weight: 500; line-height: 1.2; }
+    .prop-desc { font-size: var(--t-sm); color: var(--text-muted); line-height: 1.75; margin-bottom: var(--s4); }
+    .prop-chips { display: flex; flex-wrap: wrap; gap: var(--s2); margin-bottom: var(--s4); }
+    .prop-meta { display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--divider); padding-top: var(--s4); }
+    .prop-loc { font-size: var(--t-xs); color: var(--text-faint); }
+    .prop-link { font-family: var(--f-display); font-size: var(--t-xs); color: var(--gold); text-decoration: none; letter-spacing: 0.06em; }
+    .prop-link:hover { color: var(--gold-lt); }
+
+    /* ================================================================
+       STANDARDS / PILLARS
+    ================================================================ */
+    .pillars-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: var(--s6); }
+    .pillar {
+      border: 1px solid var(--border); border-radius: var(--r-lg);
+      padding: var(--s8) var(--s6); background: var(--surface);
+      text-align: center; transition: border-color var(--ease), background var(--ease);
+      position: relative; overflow: hidden;
+    }
+    .pillar::before {
+      content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px;
+      background: linear-gradient(to right, transparent, var(--gold), transparent);
+      opacity: 0; transition: opacity var(--ease);
+    }
+    .pillar:hover { border-color: rgba(201,168,76,0.35); background: var(--gold-bg); }
+    .pillar:hover::before { opacity: 1; }
+    .pillar-icon { font-size: 2rem; margin-bottom: var(--s4); }
+    .pillar-title { font-family: var(--f-display); font-size: var(--t-base); color: var(--text); margin-bottom: var(--s3); letter-spacing: 0.04em; }
+    .pillar-desc { font-size: var(--t-sm); color: var(--text-muted); line-height: 1.75; }
+    @media (max-width:768px) { .pillars-grid { grid-template-columns: 1fr 1fr; } }
+    @media (max-width:480px) { .pillars-grid { grid-template-columns: 1fr; } }
+
+    /* ================================================================
+       CULTURAL ALIGNMENT
+    ================================================================ */
+    .culture-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: var(--s6); }
+    .culture-card { border: 1px solid var(--border); border-radius: var(--r-xl); overflow: hidden; background: var(--surface-2); }
+    .culture-img { aspect-ratio: 4/3; overflow: hidden; }
+    .culture-img img { width:100%; height:100%; object-fit:cover; }
+    .culture-body { padding: var(--s5); }
+    .culture-tag { font-family: var(--f-display); font-size: var(--t-xs); color: var(--gold); letter-spacing: 0.14em; text-transform: uppercase; margin-bottom: var(--s2); }
+    .culture-title { font-family: var(--f-display); font-size: var(--t-base); color: var(--text); margin-bottom: var(--s3); }
+    .culture-desc { font-size: var(--t-sm); color: var(--text-muted); line-height: 1.75; }
+    @media (max-width:900px) { .culture-grid { grid-template-columns: 1fr 1fr; } }
+    @media (max-width:580px) { .culture-grid { grid-template-columns: 1fr; } }
+
+    /* ================================================================
+       TESTIMONIALS
+    ================================================================ */
+    .testimonials-band { background: var(--surface); border-top:1px solid var(--border); border-bottom:1px solid var(--border); }
+    .test-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: var(--s6); }
+    .test-card { border:1px solid var(--border); border-radius:var(--r-lg); padding:var(--s6); background:var(--surface-2); }
+    .test-q { font-size:2rem; color:var(--gold); opacity:0.35; line-height:1; margin-bottom:var(--s3); font-family:var(--f-serif); }
+    .test-text { font-family:var(--f-serif); font-size:var(--t-base); color:var(--text-muted); line-height:1.72; margin-bottom:var(--s5); font-style:italic; }
+    .test-author { font-family:var(--f-display); font-size:var(--t-xs); color:var(--text-faint); letter-spacing:0.1em; text-transform:uppercase; }
+    .test-source { font-family:var(--f-display); font-size:var(--t-xs); color:var(--gold); }
+    @media (max-width:900px) { .test-grid { grid-template-columns:1fr 1fr; } }
+    @media (max-width:580px) { .test-grid { grid-template-columns:1fr; } }
+
+    /* ================================================================
+       VISION QUOTE BAND
+    ================================================================ */
+    .vision-band {
+      position: relative; overflow: hidden; text-align: center;
+      padding-block: clamp(var(--s20), 12vw, var(--s32));
+      background:
+        linear-gradient(to bottom, rgba(10,8,6,0.88), rgba(10,8,6,0.92)),
+        url('https://algedra.com.tr/assets/imgs/upload2/villa-design-and-architecture-in-oman/omaniarchitecture31_68c2985ae4d57.jpg') center/cover no-repeat;
+    }
+    .vision-pattern { position:absolute; inset:0; opacity:0.05; background-image:url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%23c9a84c' stroke-width='0.4'%3E%3Cpolygon points='40,4 52,16 76,16 76,40 52,64 40,76 28,64 4,40 4,16 28,16'/%3E%3C/g%3E%3C/svg%3E"); background-size:80px 80px; }
+    .vision-content { position:relative; z-index:2; }
+    .vision-arabic { font-family:var(--f-arabic); font-size:var(--t-xl); color:var(--gold); opacity:0.7; margin-bottom:var(--s6); direction:rtl; }
+    .vision-quote { font-family:var(--f-serif); font-size:var(--t-2xl); color:#f5ead0; font-weight:400; font-style:italic; max-width:760px; margin-inline:auto; margin-bottom:var(--s8); line-height:1.45; }
+    .vision-quote span { color:var(--gold); font-style:normal; }
+    .vision-attr { font-family:var(--f-display); font-size:var(--t-xs); color:var(--text-muted); letter-spacing:0.18em; text-transform:uppercase; }
+
+    /* ================================================================
+       PROPOSAL / OFFER SECTION
+    ================================================================ */
+    .offer-section { background: var(--surface); }
+    .offer-grid { display: grid; grid-template-columns: 1fr 1fr; gap: var(--s12); align-items: start; }
+    .offer-list { display:flex; flex-direction:column; gap: var(--s5); }
+    .offer-item { display:flex; gap: var(--s4); align-items:flex-start; border-left:2px solid var(--border); padding-left:var(--s5); transition: border-color var(--ease); }
+    .offer-item:hover { border-color: var(--gold); }
+    .offer-num { font-family:var(--f-display); font-size:var(--t-xl); color:var(--gold); font-weight:600; line-height:1; flex-shrink:0; }
+    .offer-text h4 { font-size:var(--t-base); font-weight:600; color:var(--text); margin-bottom:var(--s1); }
+    .offer-text p { font-size:var(--t-sm); color:var(--text-muted); line-height:1.75; max-width:44ch; }
+    .models-grid { display:grid; grid-template-columns:1fr 1fr; gap:var(--s4); }
+    .model-card { border:1px solid var(--border); border-radius:var(--r-lg); padding:var(--s6); background:var(--surface-2); position:relative; overflow:hidden; }
+    .model-card.feat { border-color:rgba(201,168,76,0.4); }
+    .model-card.feat::before { content:'★ Recommended'; position:absolute; top:var(--s3); right:var(--s3); font-family:var(--f-display); font-size:0.58rem; color:var(--gold); letter-spacing:0.1em; }
+    .model-title { font-family:var(--f-display); font-size:var(--t-base); color:var(--gold); margin-bottom:var(--s3); letter-spacing:0.04em; }
+    .model-desc { font-size:var(--t-sm); color:var(--text-muted); line-height:1.75; }
+    .airport-box { margin-top:var(--s8); border:1px solid rgba(201,168,76,0.25); border-radius:var(--r-lg); padding:var(--s6); background:var(--gold-bg); }
+    .airport-box-label { font-family:var(--f-display); font-size:var(--t-xs); color:var(--gold); letter-spacing:0.14em; text-transform:uppercase; margin-bottom:var(--s3); }
+    .airport-box-title { font-family:var(--f-serif); font-size:var(--t-lg); color:var(--text); margin-bottom:var(--s3); font-weight:500; }
+    .airport-box-desc { font-size:var(--t-sm); color:var(--text-muted); line-height:1.78; }
+    @media (max-width:768px) { .offer-grid, .models-grid { grid-template-columns:1fr; } }
+
+    /* ================================================================
+       CTA / CONTACT
+    ================================================================ */
+    .cta-sect { text-align:center; }
+    .cta-box {
+      border: 1px solid rgba(201,168,76,0.25); border-radius: var(--r-xl);
+      padding: clamp(var(--s10), 6vw, var(--s20)) clamp(var(--s8), 6vw, var(--s20));
+      background: var(--surface); position: relative; overflow: hidden;
+    }
+    .cta-box::before { content:''; position:absolute; top:-80px; left:50%; transform:translateX(-50%); width:280px; height:280px; background:radial-gradient(circle, rgba(201,168,76,0.07) 0%, transparent 70%); }
+    .cta-title { font-family:var(--f-display); font-size:var(--t-2xl); font-weight:600; color:var(--text); margin-bottom:var(--s5); letter-spacing:0.04em; }
+    .cta-sub { font-family:var(--f-serif); font-size:var(--t-lg); color:var(--text-muted); max-width:58ch; margin-inline:auto; margin-bottom:var(--s10); line-height:1.78; font-style:italic; font-weight:300; }
+    .cta-contacts { display:flex; justify-content:center; gap:var(--s8); flex-wrap:wrap; margin-bottom:var(--s10); }
+    .contact-item { display:flex; flex-direction:column; align-items:center; gap:var(--s2); }
+    .contact-label { font-family:var(--f-display); font-size:var(--t-xs); color:var(--text-faint); letter-spacing:0.14em; text-transform:uppercase; }
+    .contact-value { font-size:var(--t-sm); color:var(--text); font-weight:500; }
+    .cta-divider { width:1px; background:var(--border); height:44px; align-self:center; }
+    .btn-primary {
+      display:inline-block; padding:var(--s4) var(--s10);
+      background:var(--gold); color:var(--bg);
+      border-radius:var(--r-full); text-decoration:none;
+      font-family:var(--f-display); font-size:var(--t-sm); font-weight:600;
+      letter-spacing:0.1em; text-transform:uppercase;
+      transition:all var(--ease); border:2px solid var(--gold);
+    }
+    .btn-primary:hover { background:transparent; color:var(--gold); }
+    .btn-secondary {
+      display:inline-block; padding:var(--s4) var(--s10);
+      background:transparent; color:var(--text-muted);
+      border-radius:var(--r-full); text-decoration:none;
+      font-family:var(--f-display); font-size:var(--t-sm);
+      letter-spacing:0.1em; text-transform:uppercase;
+      transition:all var(--ease); border:2px solid var(--border);
+      margin-left:var(--s4);
+    }
+    .btn-secondary:hover { border-color:var(--text-muted); color:var(--text); }
+    .ref-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(190px,1fr)); gap:var(--s4); margin-top:var(--s12); padding-top:var(--s8); border-top:1px solid var(--divider); }
+    .ref-link { display:flex; flex-direction:column; gap:var(--s2); text-decoration:none; padding:var(--s4); border:1px solid var(--border); border-radius:var(--r-md); transition:border-color var(--ease); }
+    .ref-link:hover { border-color:var(--gold); }
+    .ref-label { font-family:var(--f-display); font-size:var(--t-xs); color:var(--gold); letter-spacing:0.12em; text-transform:uppercase; }
+    .ref-name { font-size:var(--t-sm); color:var(--text); }
+    .ref-url { font-size:var(--t-xs); color:var(--text-faint); }
+
+    /* ================================================================
+       FOOTER
+    ================================================================ */
+    footer { border-top:1px solid var(--border); padding:var(--s10) var(--s8); display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:var(--s6); }
+    .footer-brand { font-family:var(--f-display); font-size:var(--t-sm); color:var(--gold); letter-spacing:0.06em; }
+    .footer-copy { font-size:var(--t-xs); color:var(--text-faint); margin-top:var(--s2); }
+    .footer-disc { font-size:var(--t-xs); color:var(--text-faint); max-width:58ch; text-align:right; line-height:1.6; }
+
+    /* ================================================================
+       SCROLL ANIMATION
+    ================================================================ */
+    @media (prefers-reduced-motion:no-preference) {
+      .fade { opacity:0; transform:translateY(20px); transition:opacity 0.65s ease, transform 0.65s ease; }
+      .fade.visible { opacity:1; transform:translateY(0); }
+      .fade-d1 { transition-delay:0.1s; }
+      .fade-d2 { transition-delay:0.2s; }
+      .fade-d3 { transition-delay:0.3s; }
+    }
+
+    /* Full-bleed image bar */
+    .full-img { width:100%; aspect-ratio:21/9; object-fit:cover; border-radius:var(--r-xl); margin-bottom:var(--s12); box-shadow:var(--card); }
+  </style>
+</head>
+<body>
+
+<!-- Oman flag accent stripe -->
+<div class="flag-stripe"></div>
+
+<!-- ================================================================
+     NAVIGATION
+================================================================ -->
+<nav>
+  <a href="#" class="nav-brand" aria-label="JB Hospitality Group">
+    <!-- SVG Logo: stylised arch / dome form -->
+    <svg viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <circle cx="17" cy="17" r="16" stroke="#c9a84c" stroke-width="1.2"/>
+      <!-- Arch / dome -->
+      <path d="M9 26 Q9 14 17 11 Q25 14 25 26" stroke="#c9a84c" stroke-width="1.2" fill="none"/>
+      <line x1="9" y1="26" x2="25" y2="26" stroke="#c9a84c" stroke-width="1"/>
+      <!-- Minaret dots -->
+      <circle cx="17" cy="9" r="1.5" fill="#c9a84c"/>
+    </svg>
+    <span class="nav-brand-text">JB Hospitality Group</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#international">International</a></li>
+    <li><a href="#portfolio">Portfolio</a></li>
+    <li><a href="#oman">Oman</a></li>
+    <li><a href="#proposal">Proposal</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- ================================================================
+     HERO
+================================================================ -->
+<section class="hero" id="home">
+  <div class="hero-bg" role="img" aria-label="Traditional Omani architecture — columns and arches of Muscat"></div>
+  <div class="hero-pattern" aria-hidden="true"></div>
+  <div class="hero-content">
+    <!-- Transliterated Arabic: "Presented with Respect" -->
+    <div class="hero-arabic" aria-label="Muqaddam bi ihtiraam — Presented with Respect">مُقدَّم بِاحترَام</div>
+    <div class="hero-eyebrow">
+      <span class="hero-eyebrow-dot"></span>
+      A Formal Proposal · May 2026
+      <span class="hero-eyebrow-dot"></span>
+    </div>
+    <h1 class="hero-title">A PROPOSAL</h1>
+    <p class="hero-title-sub">
+      To the Ministry of Heritage &amp; Tourism<br>
+      Sultanate of Oman
+    </p>
+    <div class="hero-divider">
+      <div class="hero-div-line rev"></div>
+      <div class="hero-ornament">✦</div>
+      <div class="hero-div-line"></div>
+    </div>
+    <div class="hero-stats">
+      <div class="h-stat">
+        <span class="h-stat-num">16</span>
+        <span class="h-stat-label">Properties</span>
+      </div>
+      <div class="h-stat-sep"></div>
+      <div class="h-stat">
+        <span class="h-stat-num">3</span>
+        <span class="h-stat-label">Countries</span>
+      </div>
+      <div class="h-stat-sep"></div>
+      <div class="h-stat">
+        <span class="h-stat-num">20+</span>
+        <span class="h-stat-label">Years Operating</span>
+      </div>
+      <div class="h-stat-sep"></div>
+      <div class="h-stat">
+        <span class="h-stat-num">Halal</span>
+        <span class="h-stat-label">Compliant Always</span>
+      </div>
+    </div>
+  </div>
+  <div class="hero-scroll" aria-hidden="true">
+    <span>Scroll</span>
+    <div class="scroll-bar"></div>
+  </div>
+</section>
+
+<!-- ================================================================
+     EXECUTIVE SUMMARY
+================================================================ -->
+<section class="exec-section" id="about">
+  <div class="container">
+    <div class="exec-grid">
+      <div>
+        <div class="s-label">Executive Overview</div>
+        <h2 class="s-title">A Legacy Built on<br><em class="gold">Excellence in Service</em></h2>
+        <div class="exec-body">
+          <p>
+            We are an established hospitality management group with operations across India and Iraq, now formally presenting our credentials to the Sultanate of Oman in the hope of contributing to the nation's remarkable Vision 2040 journey.
+          </p>
+          <p>
+            Our portfolio spans <strong>16 properties</strong> across hotels, restaurants, banquet venues, and pilgrim residences. In India, 13 diverse establishments serve Ahmedabad — one of South Asia's most dynamic commercial cities. Internationally, we manage three distinguished pilgrim residences in the Holy Cities of <strong>Najaf, Kazmain, and Karbala</strong> — properties that have made us deeply familiar with the expectations of multi-cultural, multi-ethnic, and multi-faith guests from across the Arab world, South Asia, and beyond.
+          </p>
+          <p>
+            Oman's hospitality revenues reached a <strong>record OMR 297.3 million</strong> in 2025, up 22.2% year-on-year. The India–Oman CEPA signed December 2025 explicitly named hospitality as a priority sector for joint investment. The Ministry of Heritage and Tourism has signed 36 usufruct contracts valued at OMR 100 million for new tourism projects. The conditions are, in every meaningful sense, ideal.
+          </p>
+          <p>
+            We do not approach Oman as a new venture. We approach it as practitioners — with years of lived experience managing guests from across the world, serving those with deep religious and cultural sensitivities, and operating food and hospitality services that are <strong>100% Halal, vegetarian-led, and internationally minded</strong>. We present this proposal with humility and respect, and we welcome any dialogue the Ministry may wish to initiate.
+          </p>
+        </div>
+      </div>
+      <div class="exec-highlights">
+        <div class="h-card fade fade-d1">
+          <div class="h-card-num">OMR 297.3M</div>
+          <div class="h-card-title">Record Oman Hotel Revenue — 2025</div>
+          <div class="h-card-desc">Up 22.2% year-on-year. The highest annual hotel revenue ever recorded in the Sultanate. Source: Cavendish Maxwell, April 2026.</div>
+        </div>
+        <div class="h-card fade fade-d2">
+          <div class="h-card-num">3 Countries</div>
+          <div class="h-card-title">Our International Management Track Record</div>
+          <div class="h-card-desc">India, Iraq (Najaf, Kazmain, Karbala). We have managed internationally since 2016, serving guests from over 30 nations annually.</div>
+        </div>
+        <div class="h-card fade fade-d3">
+          <div class="h-card-num">$51 Billion</div>
+          <div class="h-card-title">Oman Vision 2040 Tourism Investment</div>
+          <div class="h-card-desc">Up to 90% expected from the private sector. Hospitality, restaurants, and integrated tourism complexes are priority investment categories.</div>
+        </div>
+        <div class="h-card fade">
+          <div class="h-card-num">India–Oman CEPA</div>
+          <div class="h-card-title">Signed December 18, 2025 — Muscat</div>
+          <div class="h-card-desc">Permits 100% FDI by Indian companies in Oman's services sector. Hospitality named a priority sector in the India–Oman Joint Statement.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="orn-div container"><div class="orn-line"></div><div class="orn-center">✦</div><div class="orn-line"></div></div>
+
+<!-- ================================================================
+     INTERNATIONAL CREDENTIALS — IRAQ RESIDENCES (FEATURED)
+================================================================ -->
+<section class="intl-section" id="international">
+  <div class="intl-geo" aria-hidden="true"></div>
+  <div class="container">
+
+    <div class="intl-banner fade">
+      <div class="s-label" style="justify-content:center;margin-bottom:var(--s4)">International Management Credentials</div>
+      <h2 class="intl-banner-title">Proven in the World's Most<br>Demanding Environments</h2>
+      <p class="intl-banner-sub">
+        Our group manages three internationally recognised pilgrim residences in the Holy Cities of Iraq — operated on behalf of Anjuman e Faiz e Panjetani, a charitable trust founded in 1912. We handle every aspect of these operations except ownership.
+      </p>
+      <p class="intl-banner-desc">
+        These residences welcome guests arriving from <strong>Iran, India, Pakistan, the UK, Australia, the United States, East Africa, and across the Arab world</strong> — all with different languages, dietary requirements, cultural expectations, and religious sensitivities. Managing this complexity with warmth, consistency, and deep respect has sharpened a capability that very few Indian hospitality groups can claim: <strong>genuine multi-cultural, multi-ethnic, multi-faith hospitality at an international standard.</strong>
+      </p>
+    </div>
+
+    <!-- Three Iraq Residence Cards -->
+    <div class="iraq-grid">
+
+      <!-- Al Najaf Residence -->
+      <article class="iraq-card fade">
+        <div class="iraq-img">
+          <img
+            src="https://images.squarespace-cdn.com/content/v1/5fce2c3049d01c20c204a8b1/1607415262166-73CIPE3GYBTOH997TZZU/NAJAF.jpg"
+            alt="Al Najaf Residence — 50m from the Holy Shrine of Imam Ali, Najaf, Iraq"
+            loading="lazy"
+            onerror="this.src='https://images.squarespace-cdn.com/content/v1/5fce2c3049d01c20c204a8b1/1607415246675-LA44CTN7DB6UIIKFB7NA/HUSSAIN_IQ-8619.jpg'"
+          />
+          <span class="iraq-shrine-badge">Shrine Boundary</span>
+          <span class="iraq-loc-badge">Najaf · Iraq</span>
+        </div>
+        <div class="iraq-body">
+          <div class="iraq-num">International · 01</div>
+          <h3 class="iraq-name">Al Najaf Residence</h3>
+          <p class="iraq-loc">📍 50m from the Holy Shrine of Imam Ali (AS), Najaf, Iraq</p>
+          <p class="iraq-desc">A beautifully restored heritage residence opened in 2016, now a beloved hub for pilgrims from across the globe. The rooftop dining room overlooks the golden dome of the Holy Shrine — a spiritual experience beyond any ordinary hotel. Separate ladies' and gents' <em>majlis</em> rooms reflect a deep understanding of Islamic hospitality values.</p>
+          <div class="iraq-specs">
+            <div class="iraq-spec">
+              <div class="iraq-spec-num">30</div>
+              <div class="iraq-spec-label">Rooms</div>
+            </div>
+            <div class="iraq-spec">
+              <div class="iraq-spec-num">70</div>
+              <div class="iraq-spec-label">Guest Capacity</div>
+            </div>
+          </div>
+          <div class="iraq-chips">
+            <span class="chip em">Shrine-Adjacent</span>
+            <span class="chip em">Since 2016</span>
+            <span class="chip gd">Rooftop Dining</span>
+            <span class="chip">Multi-National Guests</span>
+            <span class="chip">Full Board</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Al Kadhimiya Residence -->
+      <article class="iraq-card fade fade-d1">
+        <div class="iraq-img" style="background: linear-gradient(135deg, #0a1508, #152010); display:flex; align-items:center; justify-content:center;">
+          <div style="text-align:center; padding:var(--s8)">
+            <div style="font-size:3rem; opacity:0.5">🕌</div>
+            <div style="font-family:var(--f-arabic); font-size:var(--t-xl); color:var(--emerald-lt); margin-top:var(--s3)">الكاظمية</div>
+            <div style="font-family:var(--f-display); font-size:var(--t-xs); color:var(--text-faint); margin-top:var(--s2); letter-spacing:0.14em">AL KADHIMIYA RESIDENCE</div>
+          </div>
+          <span class="iraq-shrine-badge">Shared Boundary Wall</span>
+          <span class="iraq-loc-badge">Kazmain · Iraq</span>
+        </div>
+        <div class="iraq-body">
+          <div class="iraq-num">International · 02</div>
+          <h3 class="iraq-name">Al Kadhimiya Residence</h3>
+          <p class="iraq-loc">📍 Immediate boundary of the Holy Shrines, Kazmain (Baghdad), Iraq</p>
+          <p class="iraq-desc">Opened January 2019, set precisely on the boundary of the Holy Shrines with panoramic 180-degree views of the twin golden domes. Every fitting — from wall lights to artwork and tiling — was hand-selected to honour the spiritual atmosphere. A rooftop restaurant and lift-accessible atrium serve guests with care and cultural sensitivity.</p>
+          <div class="iraq-specs">
+            <div class="iraq-spec">
+              <div class="iraq-spec-num">25</div>
+              <div class="iraq-spec-label">Rooms</div>
+            </div>
+            <div class="iraq-spec">
+              <div class="iraq-spec-num">76</div>
+              <div class="iraq-spec-label">Guest Capacity</div>
+            </div>
+          </div>
+          <div class="iraq-chips">
+            <span class="chip em">Twin Dome Views</span>
+            <span class="chip em">Since 2019</span>
+            <span class="chip gd">Rooftop Restaurant</span>
+            <span class="chip">180° Panorama</span>
+            <span class="chip">Accessible</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Al Qasr Residence -->
+      <article class="iraq-card fade fade-d2">
+        <div class="iraq-img">
+          <img
+            src="https://images.squarespace-cdn.com/content/v1/5fce2c3049d01c20c204a8b1/e78a7f52-ad24-4451-9abc-59339beadc1d/KARBALA+3.jpeg"
+            alt="Al Qasr Residence — 14-storey property in Karbala with views of the Holy Shrines"
+            loading="lazy"
+            onerror="this.src='https://images.squarespace-cdn.com/content/v1/5fce2c3049d01c20c204a8b1/1610626570258-V37FZYXDHV6RMXUO8Y5S/Al+Qasr+Gallery_4.jpg'"
+          />
+          <span class="iraq-shrine-badge">Bab-al-Qibla Street</span>
+          <span class="iraq-loc-badge">Karbala · Iraq</span>
+        </div>
+        <div class="iraq-body">
+          <div class="iraq-num">International · 03</div>
+          <h3 class="iraq-name">Al Qasr Residence</h3>
+          <p class="iraq-loc">📍 Imam Hussain Bab-al-Qibla Street, Karbala, Iraq</p>
+          <p class="iraq-desc">A landmark 14-storey modern pilgrim residence in Karbala, metres from Bain-al-Haramain. The intricate <em>Kashi</em> tilework on the façade matches the beautifully designed interior — providing a spiritually uplifting environment. Every floor has a residents' lounge. The rooftop restaurant offers unobstructed shrine views.</p>
+          <div class="iraq-specs">
+            <div class="iraq-spec">
+              <div class="iraq-spec-num">143</div>
+              <div class="iraq-spec-label">Rooms</div>
+            </div>
+            <div class="iraq-spec">
+              <div class="iraq-spec-num">460</div>
+              <div class="iraq-spec-label">Guest Capacity</div>
+            </div>
+          </div>
+          <div class="iraq-chips">
+            <span class="chip em">14 Storeys</span>
+            <span class="chip em">Kashi Façade</span>
+            <span class="chip gd">Rooftop Restaurant</span>
+            <span class="chip">Floor Lounges</span>
+            <span class="chip">Full Board</span>
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <!-- What This Experience Means -->
+    <div class="intl-insight fade">
+      <h3 class="intl-insight-title">What This International Experience Means for Oman</h3>
+      <div class="intl-insight-grid">
+        <div class="insight-item">
+          <div class="insight-icon">🌐</div>
+          <div class="insight-title">30+ Nationalities Served Daily</div>
+          <p class="insight-desc">Our Iraq residences welcome guests from across the Arab world, South Asia, the UK, Australia, North America, and East Africa — a more diverse international guest profile than most hotels in the region.</p>
+        </div>
+        <div class="insight-item">
+          <div class="insight-icon">🕌</div>
+          <div class="insight-title">Islamic Hospitality as a Living Practice</div>
+          <p class="insight-desc">Halal kitchens, gender-sensitive spaces, Arabic-speaking interactions, prayer-time considerations — these are not policies we implement; they are how we operate every single day at our Iraq properties.</p>
+        </div>
+        <div class="insight-item">
+          <div class="insight-icon">🍽</div>
+          <div class="insight-title">Sub-Continental &amp; International Buffets</div>
+          <p class="insight-desc">Our Iraq restaurants serve daily buffets spanning Indian, Continental, Middle Eastern, and international cuisines — rotating menus, three meals a day, full board. A capability directly transferable to Oman's international visitor base.</p>
+        </div>
+        <div class="insight-item">
+          <div class="insight-icon">♿</div>
+          <div class="insight-title">Accessible &amp; Elderly-Friendly Operations</div>
+          <p class="insight-desc">Pilgrim travellers often include elderly and mobility-challenged guests. Our Iraq properties are lift-equipped and thoughtfully designed — a sensitivity that carries directly into premium hotel management.</p>
+        </div>
+        <div class="insight-item">
+          <div class="insight-icon">🤲</div>
+          <div class="insight-title">Not-for-Profit Ethos, For-Profit Standards</div>
+          <p class="insight-desc">Our Iraq residences operate as not-for-profit facilities for the charitable trust — yet we maintain high service standards. This instills a culture of genuine service excellence untainted by cutting corners.</p>
+        </div>
+        <div class="insight-item">
+          <div class="insight-icon">🏗</div>
+          <div class="insight-title">Full Operational Management</div>
+          <p class="insight-desc">We manage these properties in their entirety: kitchen, housekeeping, front office, maintenance, guest relations. Everything except ownership. This precisely mirrors the management contract and operations model we propose for Oman.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="orn-div container"><div class="orn-line"></div><div class="orn-center">✦</div><div class="orn-line"></div></div>
+
+<!-- ================================================================
+     OMAN MARKET SECTION
+================================================================ -->
+<section class="oman-sect" id="oman">
+  <div class="oman-glow" aria-hidden="true"></div>
+  <div class="container">
+    <div class="s-label">Market Intelligence</div>
+    <h2 class="s-title">The Oman Opportunity</h2>
+    <p class="s-sub">Oman's hospitality sector is experiencing its most sustained growth in history, supported by Muscat International Airport — handling 13.2 million passengers annually — and the ambitious Vision 2040 national strategy.</p>
+
+    <img
+      src="https://www.hillintl.com/wp-content/uploads/2021/03/Muscat-International-Airport-2-1920x0-c-default.jpg"
+      alt="Muscat International Airport — gateway to Oman's booming hospitality sector"
+      class="full-img" loading="lazy"
+    />
+
+    <div class="stat-grid">
+      <div class="stat-card fade">
+        <div class="stat-value">14.9M</div>
+        <div class="stat-label">Airport Passengers 2025</div>
+        <div class="stat-src">Cavendish Maxwell, 2026</div>
+      </div>
+      <div class="stat-card fade fade-d1">
+        <div class="stat-value">+22.2%</div>
+        <div class="stat-label">Hotel Revenue Growth YoY</div>
+        <div class="stat-src">Oman Observer, April 2026</div>
+      </div>
+      <div class="stat-card fade fade-d2">
+        <div class="stat-value">57%</div>
+        <div class="stat-label">Average Occupancy 2025</div>
+        <div class="stat-src">Up 13.6% from 2024</div>
+      </div>
+      <div class="stat-card fade fade-d3">
+        <div class="stat-value">36,800</div>
+        <div class="stat-label">Hotel Rooms in Oman</div>
+        <div class="stat-src">+2,400 rooms due 2026</div>
+      </div>
+      <div class="stat-card fade">
+        <div class="stat-value">5.5%</div>
+        <div class="stat-label">Tourism CAGR 2024–2028</div>
+        <div class="stat-src">Oxford Business Group</div>
+      </div>
+      <div class="stat-card fade fade-d1">
+        <div class="stat-value">36</div>
+        <div class="stat-label">MHT Investment Contracts 2025</div>
+        <div class="stat-src">OMR 100M value</div>
+      </div>
+    </div>
+
+    <div class="two-col">
+      <div class="img-block">
+        <img
+          src="https://www.ahstatic.com/photos/b7a7_ho_00_p_1024x768.jpg"
+          alt="Novotel Muscat Airport — hospitality at Muscat International Airport"
+          loading="lazy"
+        />
+        <div class="img-caption">Muscat International Airport Corridor — the primary opportunity zone</div>
+      </div>
+      <div>
+        <div class="s-label">Why Oman, Why Now</div>
+        <h3 class="s-title" style="font-size:var(--t-xl)">The Right Moment<br>to Present This Proposal</h3>
+        <div class="why-list">
+          <div class="why-item">
+            <div class="why-icon">✈</div>
+            <div class="why-text">
+              <h4>Airport Hospitality is Premium Real Estate</h4>
+              <p>Muscat International Airport handled 13.2M passengers in 2025. Airport-proximate dining and accommodation is among the highest-demand, highest-margin hospitality in any economy.</p>
+            </div>
+          </div>
+          <div class="why-item">
+            <div class="why-icon">🌍</div>
+            <div class="why-text">
+              <h4>A Diverse International Visitor Base</h4>
+              <p>European visitors to Oman surged 22%. Indian visitors form a growing segment. Our multi-cuisine, multi-faith portfolio was built precisely for this guest profile.</p>
+            </div>
+          </div>
+          <div class="why-item">
+            <div class="why-icon">🤝</div>
+            <div class="why-text">
+              <h4>CEPA Opens the Legal Framework</h4>
+              <p>The India–Oman CEPA (December 2025) permits 100% Indian FDI in Oman services. India and Oman explicitly named hospitality as a priority sector in their Joint Statement.</p>
+            </div>
+          </div>
+          <div class="why-item">
+            <div class="why-icon">🕌</div>
+            <div class="why-text">
+              <h4>Deep Cultural Resonance</h4>
+              <p>Our operations in Iraq have given us an authentic, lived understanding of Islamic hospitality values — Diyafa — that goes beyond policy into daily practice. We understand what Oman's guests expect.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================================================================
+     INDIA–OMAN RELATIONS
+================================================================ -->
+<section class="rel-band" id="relations">
+  <div class="container">
+    <div style="text-align:center; margin-bottom:var(--s10)">
+      <div class="s-label" style="justify-content:center">Strategic Context</div>
+      <h2 class="s-title">India &amp; Oman: A Bond<br>Older Than Nations</h2>
+    </div>
+
+    <div class="cepa-box fade">
+      <div class="cepa-title">India–Oman Comprehensive Economic Partnership Agreement</div>
+      <p class="cepa-body">
+        Signed on 18 December 2025 by Prime Minister Modi and His Majesty Sultan Haitham Bin Tarik in Muscat, the India–Oman CEPA marks a watershed in bilateral relations. Both leaders explicitly identified <strong style="color:var(--gold)">hospitality</strong> as a priority sector for joint investment. Bilateral trade stands at USD 10.61 billion, over 6,000 joint ventures are active, and the CEPA now permits 100% FDI by Indian companies across Oman's services sector — creating the most favourable legal conditions in history for this proposal.
+      </p>
+      <div class="cepa-points">
+        <div class="cepa-point"><span class="cepa-dot"></span><span>100% Indian FDI now permitted in Oman services</span></div>
+        <div class="cepa-point"><span class="cepa-dot"></span><span>Oman eliminates duties on 98.08% of Indian tariff lines</span></div>
+        <div class="cepa-point"><span class="cepa-dot"></span><span>Hospitality named in the India–Oman Joint Statement</span></div>
+        <div class="cepa-point"><span class="cepa-dot"></span><span>India–Oman Joint Investment Fund actively supports ventures</span></div>
+        <div class="cepa-point"><span class="cepa-dot"></span><span>600,000+ Indian nationals reside in Oman</span></div>
+        <div class="cepa-point"><span class="cepa-dot"></span><span>1,200+ years of India–Oman maritime trade history</span></div>
+      </div>
+    </div>
+
+    <div class="s-label">A Relationship Built Over Centuries</div>
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-left"><div class="tl-dot"></div><div class="tl-line"></div></div>
+        <div class="tl-content">
+          <div class="tl-year">1,200+ Years of Connection</div>
+          <div class="tl-title">Shared Maritime Heritage</div>
+          <div class="tl-desc">The Indian Ocean trade route between Oman and India is among the oldest in human history. Shared merchant culture, food, and language ties form the bedrock of what today is a formal economic and strategic alliance.</div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-left"><div class="tl-dot"></div><div class="tl-line"></div></div>
+        <div class="tl-content">
+          <div class="tl-year">2016 — Iraq Operations Begin</div>
+          <div class="tl-title">Our Group Goes International</div>
+          <div class="tl-desc">Al Najaf Residence opens in 2016 under our management, marking our group's first international property. We begin serving guests from across the Arab world, South Asia, the UK, Australia and beyond — building our multi-cultural hospitality expertise.</div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-left"><div class="tl-dot"></div><div class="tl-line"></div></div>
+        <div class="tl-content">
+          <div class="tl-year">2025 — Oman Records Best Ever Year</div>
+          <div class="tl-title">OMR 297.3M in Hotel Revenue</div>
+          <div class="tl-desc">Oman's hospitality sector breaks all records. European visitors surge 22%. Ministry of Heritage and Tourism signs 36 new usufruct contracts worth OMR 100 million. 2,400 new hotel rooms planned for 2026.</div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-left"><div class="tl-dot"></div></div>
+        <div class="tl-content">
+          <div class="tl-year">December 18, 2025 — Muscat</div>
+          <div class="tl-title">India–Oman CEPA Signed</div>
+          <div class="tl-desc">Prime Minister Modi and Sultan Haitham sign the Comprehensive Economic Partnership Agreement in Muscat. Hospitality is named a priority sector. 100% Indian FDI in Omani services now legally permitted. Our window is open.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="orn-div container"><div class="orn-line"></div><div class="orn-center">✦</div><div class="orn-line"></div></div>
+
+<!-- ================================================================
+     INDIA PORTFOLIO
+================================================================ -->
+<section class="portfolio-sect" id="portfolio">
+  <div class="container">
+    <div class="s-label">Our India Portfolio</div>
+    <h2 class="s-title">13 Properties Across<br><em class="gold">Hotels, Restaurants &amp; Banquets</em></h2>
+    <p class="s-sub">Each property has a distinct identity and purpose — united by a shared commitment to service, Halal-compliant kitchens, and guest experiences that guests return to.</p>
+
+    <div class="tab-nav" role="tablist">
+      <button class="tab-btn active" onclick="switchTab(event,'all')">All 13 Properties</button>
+      <button class="tab-btn" onclick="switchTab(event,'hotels')">Hotels</button>
+      <button class="tab-btn" onclick="switchTab(event,'restaurants')">Restaurants</button>
+      <button class="tab-btn" onclick="switchTab(event,'banquets')">Banquets &amp; Events</button>
+    </div>
+
+    <!-- ALL PROPERTIES -->
+    <div class="tab-panel active" id="tab-all">
+      <div class="prop-grid">
+        <article class="prop-card fade">
+          <div class="prop-img">
+            <img src="https://www.epitomerestaurant.com/img/4.jpg" alt="Epitome Restaurant Banquet interior" loading="lazy" onerror="this.src='https://cdn.venuemonk.com/assets/ahmedabad/epitome-restaurant-banquet-ghodasar/images/full/epitome-restaurant-banquet-ghodasar-7.jpg'" />
+            <span class="prop-tag">Restaurant &amp; Banquet</span>
+          </div>
+          <div class="prop-body">
+            <div class="prop-num">India · 01</div>
+            <h3 class="prop-name">Epitome Restaurant &amp; Banquet</h3>
+            <p class="prop-desc">The finest multi-cuisine dining in Ahmedabad — grand banquet hall for up to 500 guests. Weddings, receptions, corporate galas, and state events with full event planning.</p>
+            <div class="prop-chips"><span class="chip gd">500 pax</span><span class="chip">Multi-Cuisine</span><span class="chip">Event Planning</span></div>
+            <div class="prop-meta"><span class="prop-loc">📍 Ghodasar, Ahmedabad</span><a href="https://www.epitomerestaurant.com" target="_blank" rel="noopener" class="prop-link">Website ↗</a></div>
+          </div>
+        </article>
+
+        <article class="prop-card fade fade-d1">
+          <div class="prop-img">
+            <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/210740265.jpg?k=7d0beea68c11752e283bf692d60bfe4f3f83cbccc55b3bea72e7c197bd485b25&o=" alt="Hotel Volga Ahmedabad" loading="lazy" />
+            <span class="prop-tag">Business Hotel</span>
+          </div>
+          <div class="prop-body">
+            <div class="prop-num">India · 02</div>
+            <h3 class="prop-name">Hotel Volga</h3>
+            <p class="prop-desc">A smart business hotel in Ahmedabad's commercial heart. Free WiFi, same-day laundry, money exchange, car rental — everything a business traveller needs.</p>
+            <div class="prop-chips"><span class="chip">30+ Rooms</span><span class="chip">City Centre</span><span class="chip">Business</span></div>
+            <div class="prop-meta"><span class="prop-loc">📍 Relief Road</span><a href="https://www.hotelvolga.in" target="_blank" rel="noopener" class="prop-link">Website ↗</a></div>
+          </div>
+        </article>
+
+        <article class="prop-card fade fade-d2">
+          <div class="prop-img" style="background:linear-gradient(135deg,#0a0d12,#141a22);display:flex;align-items:center;justify-content:center;">
+            <div style="text-align:center"><div style="font-family:var(--f-display);font-size:var(--t-xl);color:var(--gold)">GOOD NIGHT</div><div style="font-family:var(--f-display);font-size:var(--t-xs);color:var(--text-faint);letter-spacing:0.2em;margin-top:4px">HOTEL · 20+ YEARS</div></div>
+          </div>
+          <div class="prop-body">
+            <div class="prop-num">India · 03</div>
+            <h3 class="prop-name">Hotel Good Night</h3>
+            <p class="prop-desc">Two decades of trusted 3-star hospitality. 25 elegantly furnished rooms — Executive, Deluxe A/C, Standard, Economy. 24-hour service, WiFi, travel assistance. 20 min from the airport.</p>
+            <div class="prop-chips"><span class="chip">3-Star</span><span class="chip">25 Rooms</span><span class="chip">20yr Legacy</span></div>
+            <div class="prop-meta"><span class="prop-loc">📍 Kalupur</span><a href="http://hotelgoodnight.co.in" target="_blank" rel="noopener" class="prop-link">Website ↗</a></div>
+          </div>
+        </article>
+
+        <article class="prop-card fade">
+          <div class="prop-img" style="background:linear-gradient(135deg,#1a0f00,#3d2400);display:flex;align-items:center;justify-content:center;"><div style="text-align:center;padding:var(--s8)"><div style="font-size:3rem;opacity:0.6">🍛</div><div style="font-family:var(--f-serif);font-size:var(--t-lg);color:var(--gold);margin-top:8px">Epicurean Alley</div></div></div>
+          <div class="prop-body">
+            <div class="prop-num">India · 04</div>
+            <h3 class="prop-name">Epicurean Alley</h3>
+            <p class="prop-desc">Authentic North Indian and Punjabi cuisine. Unlimited dining, generous portions, honest pricing — a neighbourhood institution built on consistent excellence.</p>
+            <div class="prop-chips"><span class="chip">North Indian</span><span class="chip">Unlimited Dining</span><span class="chip">Punjabi</span></div>
+            <div class="prop-meta"><span class="prop-loc">📍 Ellis Bridge</span><a href="https://epicureanalley.com" target="_blank" rel="noopener" class="prop-link">Website ↗</a></div>
+          </div>
+        </article>
+
+        <article class="prop-card fade fade-d1">
+          <div class="prop-img">
+            <img src="https://junglebhookh.com/images/09.jpg" alt="Jungle Bhookh themed restaurant interior" loading="lazy" onerror="this.src='https://junglebhookh.com/images/07.jpg'" />
+            <span class="prop-tag gold">Signature Concept</span>
+          </div>
+          <div class="prop-body">
+            <div class="prop-num">India · 05</div>
+            <h3 class="prop-name">Jungle Bhookh Restaurant &amp; Banquet</h3>
+            <p class="prop-desc">Ahmedabad's beloved jungle-themed dining concept — immersive, family-friendly, 400-guest banquet. Multi-cuisine: Indian, Mexican, Chinese, Italian, Thai, Continental.</p>
+            <div class="prop-chips"><span class="chip gd">400 pax</span><span class="chip">Jungle Theme</span><span class="chip">Multi-Cuisine</span></div>
+            <div class="prop-meta"><span class="prop-loc">📍 Ellis Bridge</span><a href="https://junglebhookh.com" target="_blank" rel="noopener" class="prop-link">Website ↗</a></div>
+          </div>
+        </article>
+
+        <article class="prop-card fade fade-d2">
+          <div class="prop-img" style="background:linear-gradient(135deg,#080a10,#131825);display:flex;align-items:center;justify-content:center;"><div style="text-align:center;padding:var(--s6)"><div style="font-family:var(--f-display);font-size:var(--t-2xl);color:var(--gold);letter-spacing:0.15em">URBANE</div><div style="font-family:var(--f-display);font-size:0.6rem;color:var(--text-faint);margin-top:4px;letter-spacing:0.15em">JB GROUP · STORM WORLDWIDE NZ</div></div></div>
+          <div class="prop-body">
+            <div class="prop-num">India · 06</div>
+            <h3 class="prop-name">Urbane The Hotel</h3>
+            <p class="prop-desc">JB Group design hotel by New Zealand's Storm Worldwide. 32 individually designed rooms. Sustainable architecture. Pure vegetarian restaurant, banquet facilities. Accessible location.</p>
+            <div class="prop-chips"><span class="chip">Design Hotel</span><span class="chip">32 Rooms</span><span class="chip">Sustainable</span></div>
+            <div class="prop-meta"><span class="prop-loc">📍 Ellis Bridge</span><a href="http://hotel-urbane.com" target="_blank" rel="noopener" class="prop-link">Website ↗</a></div>
+          </div>
+        </article>
+
+        <article class="prop-card fade">
+          <div class="prop-img">
+            <img src="https://www.eldorado-hotel.com/images/rhodium.jpg" alt="El Dorado boutique hotel room" loading="lazy" />
+            <span class="prop-tag gold">4-Star Boutique</span>
+          </div>
+          <div class="prop-body">
+            <div class="prop-num">India · 07</div>
+            <h3 class="prop-name">El Dorado Hotel</h3>
+            <p class="prop-desc">The JB Group's 4-star crown. 40 uniquely designed rooms with Italian furnishings by Storm Worldwide NZ. Vegan restaurant Aureate, steam, sauna, fitness. 11km from the airport.</p>
+            <div class="prop-chips"><span class="chip gd">4-Star Boutique</span><span class="chip">40 Unique Rooms</span><span class="chip">Airport 11km</span></div>
+            <div class="prop-meta"><span class="prop-loc">📍 Navrangpura</span><a href="https://www.eldorado-hotel.com" target="_blank" rel="noopener" class="prop-link">Website ↗</a></div>
+          </div>
+        </article>
+
+        <article class="prop-card fade fade-d1">
+          <div class="prop-img" style="background:linear-gradient(135deg,#1a0f00,#2d1a00);display:flex;align-items:center;justify-content:center;"><div style="text-align:center;padding:var(--s8)"><div style="font-size:2.5rem;opacity:0.7">🎊</div><div style="font-family:var(--f-serif);font-size:var(--t-xl);color:var(--gold);margin-top:8px">The Grand Spree</div><div style="font-family:var(--f-display);font-size:var(--t-xs);color:var(--text-faint);letter-spacing:0.2em;margin-top:4px">BANQUET</div></div></div>
+          <div class="prop-body">
+            <div class="prop-num">India · 08</div>
+            <h3 class="prop-name">The Grand Spree Banquet</h3>
+            <p class="prop-desc">A luxury banquet venue high on opulence, soothing decor, and curated lighting. All-in-one solution: décor, catering, entertainment. Ideal for intimate to grand celebrations.</p>
+            <div class="prop-chips"><span class="chip">Luxury Banquet</span><span class="chip">All-In-One</span><span class="chip">Premium Decor</span></div>
+            <div class="prop-meta"><span class="prop-loc">📍 Ahmedabad</span><a href="https://www.grandspree.com" target="_blank" rel="noopener" class="prop-link">Website ↗</a></div>
+          </div>
+        </article>
+
+        <article class="prop-card fade fade-d2">
+          <div class="prop-img" style="background:linear-gradient(135deg,#10080a,#1f1015);display:flex;align-items:center;justify-content:center;"><div style="text-align:center;padding:var(--s8)"><div style="font-family:var(--f-display);font-size:var(--t-2xl);color:var(--gold)">The Spree</div><div style="font-family:var(--f-display);font-size:var(--t-xs);color:var(--text-faint);letter-spacing:0.2em;margin-top:4px">BANQUET</div></div></div>
+          <div class="prop-body">
+            <div class="prop-num">India · 09</div>
+            <h3 class="prop-name">The Spree Banquet</h3>
+            <p class="prop-desc">Multi-hall banquet venue handling hundreds of events annually. Sister property to The Grand Spree, serving the full spectrum of weddings, corporate events, and social celebrations.</p>
+            <div class="prop-chips"><span class="chip">Multi-Hall</span><span class="chip">Weddings</span><span class="chip">Corporate</span></div>
+            <div class="prop-meta"><span class="prop-loc">📍 Ahmedabad</span><a href="https://www.spreebanquet.com" target="_blank" rel="noopener" class="prop-link">Website ↗</a></div>
+          </div>
+        </article>
+
+        <article class="prop-card fade">
+          <div class="prop-img">
+            <img src="https://restaurantindia.s3.ap-south-1.amazonaws.com/s3fs-public/2025-09/Mann%20%26%20Salwa%20Introduces%20Sora%2C%20a%2011%2C000-Sq-Ft%20Asian%20Peruvian%20Dining%20Concept.jpg" alt="The Primo by Mann and Salwa — Sora restaurant" loading="lazy" />
+            <span class="prop-tag gold">Multi-Concept Dining</span>
+          </div>
+          <div class="prop-body">
+            <div class="prop-num">India · 10</div>
+            <h3 class="prop-name">The Primo by Mann &amp; Salwa</h3>
+            <p class="prop-desc">Three world-class restaurants in one landmark: <em>Sora</em> (Asian Peruvian, 11,000 sq ft — Ahmedabad's first), <em>Sahtain</em> (Levantine), <em>Vyanj</em> (contemporary Indian). 2025's most celebrated dining opening.</p>
+            <div class="prop-chips"><span class="chip gd">Three Concepts</span><span class="chip">11,000 sq ft</span><span class="chip">Levantine</span></div>
+            <div class="prop-meta"><span class="prop-loc">📍 Ambli</span><a href="https://www.instagram.com/theprimo.mannsalwa" target="_blank" rel="noopener" class="prop-link">Instagram ↗</a></div>
+          </div>
+        </article>
+
+        <article class="prop-card fade fade-d1">
+          <div class="prop-img">
+            <img src="https://ik.imagekit.io/u3pd2g7gy/ROHI2381.jpg" alt="La Serata Banquets and Party Lawn Ahmedabad" loading="lazy" onerror="this.src='https://cdn.venuelook.com/uploads/space_40295/1736596720_595x400.png'" />
+            <span class="prop-tag">Banquet &amp; Lawn</span>
+          </div>
+          <div class="prop-body">
+            <div class="prop-num">India · 11</div>
+            <h3 class="prop-name">La Serata Banquet &amp; Lawn</h3>
+            <p class="prop-desc">Elegant indoor and outdoor banquet venue on SP Ring Road. Four versatile spaces, 50–350 guests, two rooms, DJ included. Premium vegetarian inhouse catering.</p>
+            <div class="prop-chips"><span class="chip gd">350 pax</span><span class="chip">Indoor + Lawn</span><span class="chip">Premium Veg</span></div>
+            <div class="prop-meta"><span class="prop-loc">📍 Shilaj Ring Road</span><a href="https://www.instagram.com/laseratabanquets" target="_blank" rel="noopener" class="prop-link">Instagram ↗</a></div>
+          </div>
+        </article>
+
+        <article class="prop-card fade fade-d2">
+          <div class="prop-img">
+            <img src="https://etimg.etb2bimg.com/thumb/msid-124248805,width-1200,height-900,resizemode-4/.jpg" alt="Mann and Salwa catering brand Ahmedabad" loading="lazy" />
+            <span class="prop-tag gold">Signature Brand</span>
+          </div>
+          <div class="prop-body">
+            <div class="prop-num">India · 12</div>
+            <h3 class="prop-name">Mann &amp; Salwa</h3>
+            <p class="prop-desc">Ahmedabad's premier catering and events brand — 4.7 stars, 64+ verified reviews. Specialists in weddings and corporate events. The parent brand behind The Primo, La Serata, and a growing constellation of culinary concepts.</p>
+            <div class="prop-chips"><span class="chip gd">4.7★</span><span class="chip">Premier Caterer</span><span class="chip">Events Brand</span></div>
+            <div class="prop-meta"><span class="prop-loc">📍 Bodakdev</span><a href="https://www.instagram.com/mannandsalwa" target="_blank" rel="noopener" class="prop-link">Instagram ↗</a></div>
+          </div>
+        </article>
+
+        <article class="prop-card fade">
+          <div class="prop-img" style="background:linear-gradient(135deg,#060f14,#0d1f26);display:flex;align-items:center;justify-content:center;"><div style="text-align:center;padding:var(--s8)"><div style="font-size:2.5rem;opacity:0.7">🍽</div><div style="font-family:var(--f-serif);font-size:var(--t-xl);color:var(--gold);margin-top:8px">Pleasure Trove</div></div></div>
+          <div class="prop-body">
+            <div class="prop-num">India · 13</div>
+            <h3 class="prop-name">Pleasure Trove Restaurant</h3>
+            <p class="prop-desc">Contemporary dining combining modern design with culinary quality. Rapidly built a loyal clientele of discerning guests. Indian, European, and Asian cuisines. Halal-friendly options.</p>
+            <div class="prop-chips"><span class="chip">Fine Dining</span><span class="chip">Indian · European</span><span class="chip">Modern Design</span></div>
+            <div class="prop-meta"><span class="prop-loc">📍 Ashram Road</span><a href="https://pleasuretrove.co.in" target="_blank" rel="noopener" class="prop-link">Website ↗</a></div>
+          </div>
+        </article>
+      </div>
+    </div>
+
+    <!-- HOTELS ONLY -->
+    <div class="tab-panel" id="tab-hotels">
+      <div class="prop-grid">
+        <article class="prop-card"><div class="prop-img"><img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/210740265.jpg?k=7d0beea68c11752e283bf692d60bfe4f3f83cbccc55b3bea72e7c197bd485b25&o=" alt="Hotel Volga" loading="lazy" /><span class="prop-tag">Business Hotel</span></div><div class="prop-body"><div class="prop-num">India · 02</div><h3 class="prop-name">Hotel Volga</h3><p class="prop-desc">Smart business hotel, Relief Road. Free WiFi, laundry, money exchange, car rental.</p><div class="prop-chips"><span class="chip">30+ Rooms</span><span class="chip">City Centre</span></div><div class="prop-meta"><span class="prop-loc">📍 Relief Road</span><a href="https://www.hotelvolga.in" target="_blank" rel="noopener" class="prop-link">Website ↗</a></div></div></article>
+        <article class="prop-card"><div class="prop-img" style="background:linear-gradient(135deg,#0a0d12,#141a22);display:flex;align-items:center;justify-content:center;"><div style="text-align:center"><div style="font-family:var(--f-display);font-size:var(--t-xl);color:var(--gold)">GOOD NIGHT</div></div></div><div class="prop-body"><div class="prop-num">India · 03</div><h3 class="prop-name">Hotel Good Night</h3><p class="prop-desc">20+ years, 3-star comfort, 25 rooms. 24-hour service, WiFi, travel assistance.</p><div class="prop-chips"><span class="chip">3-Star</span><span class="chip">25 Rooms</span><span class="chip">20yr Legacy</span></div><div class="prop-meta"><span class="prop-loc">📍 Kalupur</span><a href="http://hotelgoodnight.co.in" target="_blank" rel="noopener" class="prop-link">Website ↗</a></div></div></article>
+        <article class="prop-card"><div class="prop-img" style="background:linear-gradient(135deg,#080a10,#131825);display:flex;align-items:center;justify-content:center;"><div style="font-family:var(--f-display);font-size:var(--t-2xl);color:var(--gold);letter-spacing:0.15em">URBANE</div></div><div class="prop-body"><div class="prop-num">India · 06</div><h3 class="prop-name">Urbane The Hotel</h3><p class="prop-desc">JB Group design hotel by Storm Worldwide NZ. 32 rooms, sustainable architecture, pure vegetarian restaurant.</p><div class="prop-chips"><span class="chip">Design Hotel</span><span class="chip">32 Rooms</span></div><div class="prop-meta"><span class="prop-loc">📍 Ellis Bridge</span><a href="http://hotel-urbane.com" target="_blank" rel="noopener" class="prop-link">Website ↗</a></div></div></article>
+        <article class="prop-card"><div class="prop-img"><img src="https://www.eldorado-hotel.com/images/rhodium.jpg" alt="El Dorado Hotel" loading="lazy" /><span class="prop-tag gold">4-Star Boutique</span></div><div class="prop-body"><div class="prop-num">India · 07</div><h3 class="prop-name">El Dorado Hotel</h3><p class="prop-desc">4-star crown jewel. 40 unique rooms, Italian furnishings, vegan restaurant Aureate, sauna, fitness. 11km from airport.</p><div class="prop-chips"><span class="chip gd">4-Star</span><span class="chip">40 Rooms</span></div><div class="prop-meta"><span class="prop-loc">📍 Navrangpura</span><a href="https://www.eldorado-hotel.com" target="_blank" rel="noopener" class="prop-link">Website ↗</a></div></div></article>
+      </div>
+    </div>
+
+    <!-- RESTAURANTS ONLY -->
+    <div class="tab-panel" id="tab-restaurants">
+      <div class="prop-grid">
+        <article class="prop-card"><div class="prop-img"><img src="https://www.epitomerestaurant.com/img/4.jpg" alt="Epitome Restaurant" loading="lazy" onerror="this.src='https://cdn.venuemonk.com/assets/ahmedabad/epitome-restaurant-banquet-ghodasar/images/full/epitome-restaurant-banquet-ghodasar-7.jpg'" /></div><div class="prop-body"><div class="prop-num">India · 01</div><h3 class="prop-name">Epitome Restaurant</h3><p class="prop-desc">Multi-cuisine fine dining, lavish setting, up to 500 guests. Indian, Continental, world cuisines.</p><div class="prop-chips"><span class="chip gd">500 pax</span><span class="chip">Multi-Cuisine</span></div><div class="prop-meta"><span class="prop-loc">📍 Ghodasar</span><a href="https://www.epitomerestaurant.com" target="_blank" rel="noopener" class="prop-link">Website ↗</a></div></div></article>
+        <article class="prop-card"><div class="prop-img"><img src="https://junglebhookh.com/images/09.jpg" alt="Jungle Bhookh restaurant" loading="lazy" /><span class="prop-tag gold">Themed Concept</span></div><div class="prop-body"><div class="prop-num">India · 05</div><h3 class="prop-name">Jungle Bhookh</h3><p class="prop-desc">Immersive jungle theme. Multi-cuisine. 100–400 guest banquet. Family favourite.</p><div class="prop-chips"><span class="chip">Jungle Theme</span><span class="chip">400 pax</span></div><div class="prop-meta"><span class="prop-loc">📍 Ellis Bridge</span><a href="https://junglebhookh.com" target="_blank" rel="noopener" class="prop-link">Website ↗</a></div></div></article>
+        <article class="prop-card"><div class="prop-img"><img src="https://restaurantindia.s3.ap-south-1.amazonaws.com/s3fs-public/2025-09/Mann%20%26%20Salwa%20Introduces%20Sora%2C%20a%2011%2C000-Sq-Ft%20Asian%20Peruvian%20Dining%20Concept.jpg" alt="The Primo Sora restaurant" loading="lazy" /><span class="prop-tag gold">Multi-Concept</span></div><div class="prop-body"><div class="prop-num">India · 10</div><h3 class="prop-name">The Primo by Mann &amp; Salwa</h3><p class="prop-desc">Three concepts: Sora (Asian Peruvian), Sahtain (Levantine), Vyanj (Indian). 11,000 sq ft.</p><div class="prop-chips"><span class="chip gd">Three Concepts</span><span class="chip">Levantine</span></div><div class="prop-meta"><span class="prop-loc">📍 Ambli</span><a href="https://www.instagram.com/theprimo.mannsalwa" target="_blank" rel="noopener" class="prop-link">Instagram ↗</a></div></div></article>
+        <article class="prop-card"><div class="prop-img" style="background:linear-gradient(135deg,#060f14,#0d1f26);display:flex;align-items:center;justify-content:center;"><div style="font-family:var(--f-serif);font-size:var(--t-xl);color:var(--gold)">Pleasure Trove</div></div><div class="prop-body"><div class="prop-num">India · 13</div><h3 class="prop-name">Pleasure Trove</h3><p class="prop-desc">Contemporary fine dining, modern design, loyal clientele. Indian, European, Asian cuisines. Halal-friendly.</p><div class="prop-chips"><span class="chip">Fine Dining</span><span class="chip">Modern</span></div><div class="prop-meta"><span class="prop-loc">📍 Ashram Road</span><a href="https://pleasuretrove.co.in" target="_blank" rel="noopener" class="prop-link">Website ↗</a></div></div></article>
+        <article class="prop-card"><div class="prop-img" style="background:linear-gradient(135deg,#1a0f00,#3d2400);display:flex;align-items:center;justify-content:center;"><div style="font-family:var(--f-serif);font-size:var(--t-xl);color:var(--gold)">Epicurean Alley</div></div><div class="prop-body"><div class="prop-num">India · 04</div><h3 class="prop-name">Epicurean Alley</h3><p class="prop-desc">Authentic North Indian and Punjabi, unlimited dining, consistent quality.</p><div class="prop-chips"><span class="chip">North Indian</span><span class="chip">Unlimited</span></div><div class="prop-meta"><span class="prop-loc">📍 Ellis Bridge</span><a href="https://epicureanalley.com" target="_blank" rel="noopener" class="prop-link">Website ↗</a></div></div></article>
+      </div>
+    </div>
+
+    <!-- BANQUETS ONLY -->
+    <div class="tab-panel" id="tab-banquets">
+      <div class="prop-grid">
+        <article class="prop-card"><div class="prop-img"><img src="https://www.epitomerestaurant.com/img/4.jpg" alt="Epitome Banquet" loading="lazy" onerror="this.src='https://media.weddingz.in/photologue/images/epitome-restaurant-banquet-epitome-restaurant-banquet-1.jpg'" /></div><div class="prop-body"><div class="prop-num">India · 01</div><h3 class="prop-name">Epitome Banquet</h3><p class="prop-desc">Grand hall, 500 guests. Weddings, receptions, conferences. Full event management.</p><div class="prop-chips"><span class="chip gd">500 pax</span><span class="chip">Weddings</span></div><div class="prop-meta"><span class="prop-loc">📍 Ghodasar</span><a href="https://www.epitomerestaurant.com" target="_blank" rel="noopener" class="prop-link">Website ↗</a></div></div></article>
+        <article class="prop-card"><div class="prop-img"><img src="https://junglebhookh.com/images/07.jpg" alt="Jungle Bhookh Banquet" loading="lazy" /></div><div class="prop-body"><div class="prop-num">India · 05</div><h3 class="prop-name">Jungle Bhookh Banquet</h3><p class="prop-desc">100–400 guests, AV-equipped, jungle theme. Corporate meetings, birthday parties, events.</p><div class="prop-chips"><span class="chip gd">400 pax</span><span class="chip">AV Equipped</span></div><div class="prop-meta"><span class="prop-loc">📍 Ellis Bridge</span><a href="https://junglebhookh.com" target="_blank" rel="noopener" class="prop-link">Website ↗</a></div></div></article>
+        <article class="prop-card"><div class="prop-img" style="background:linear-gradient(135deg,#1a0f00,#2d1a00);display:flex;align-items:center;justify-content:center;"><div style="font-family:var(--f-serif);font-size:var(--t-xl);color:var(--gold)">The Grand Spree</div></div><div class="prop-body"><div class="prop-num">India · 08</div><h3 class="prop-name">The Grand Spree Banquet</h3><p class="prop-desc">Luxury venue with opulent décor and lighting. All-in-one: décor, catering, entertainment.</p><div class="prop-chips"><span class="chip">Luxury</span><span class="chip">All-In-One</span></div><div class="prop-meta"><span class="prop-loc">📍 Ahmedabad</span><a href="https://www.grandspree.com" target="_blank" rel="noopener" class="prop-link">Website ↗</a></div></div></article>
+        <article class="prop-card"><div class="prop-img" style="background:linear-gradient(135deg,#10080a,#1f1015);display:flex;align-items:center;justify-content:center;"><div style="font-family:var(--f-display);font-size:var(--t-2xl);color:var(--gold)">The Spree</div></div><div class="prop-body"><div class="prop-num">India · 09</div><h3 class="prop-name">The Spree Banquet</h3><p class="prop-desc">Multi-hall venue, hundreds of events per year. Weddings, corporate, social events.</p><div class="prop-chips"><span class="chip">Multi-Hall</span><span class="chip">Weddings</span></div><div class="prop-meta"><span class="prop-loc">📍 Ahmedabad</span><a href="https://www.spreebanquet.com" target="_blank" rel="noopener" class="prop-link">Website ↗</a></div></div></article>
+        <article class="prop-card"><div class="prop-img"><img src="https://ik.imagekit.io/u3pd2g7gy/ROHI2381.jpg" alt="La Serata Banquet" loading="lazy" onerror="this.src='https://cdn.venuelook.com/uploads/space_40295/1736596720_595x400.png'" /></div><div class="prop-body"><div class="prop-num">India · 11</div><h3 class="prop-name">La Serata Banquet &amp; Lawn</h3><p class="prop-desc">Four spaces, 50–350 guests. Indoor and outdoor. DJ service. Premium vegetarian catering.</p><div class="prop-chips"><span class="chip gd">350 pax</span><span class="chip">Indoor + Lawn</span></div><div class="prop-meta"><span class="prop-loc">📍 Shilaj</span><a href="https://www.instagram.com/laseratabanquets" target="_blank" rel="noopener" class="prop-link">Instagram ↗</a></div></div></article>
+        <article class="prop-card"><div class="prop-img"><img src="https://etimg.etb2bimg.com/thumb/msid-124248805,width-1200,height-900,resizemode-4/.jpg" alt="Mann and Salwa catering" loading="lazy" /></div><div class="prop-body"><div class="prop-num">India · 12</div><h3 class="prop-name">Mann &amp; Salwa</h3><p class="prop-desc">4.7★ premier catering brand. Weddings and corporate events. Full-service, bespoke menus.</p><div class="prop-chips"><span class="chip gd">4.7★</span><span class="chip">Full-Service</span></div><div class="prop-meta"><span class="prop-loc">📍 Bodakdev</span><a href="https://www.instagram.com/mannandsalwa" target="_blank" rel="noopener" class="prop-link">Instagram ↗</a></div></div></article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="orn-div container"><div class="orn-line"></div><div class="orn-center">✦</div><div class="orn-line"></div></div>
+
+<!-- ================================================================
+     PILLARS / STANDARDS
+================================================================ -->
+<section id="standards">
+  <div class="container">
+    <div style="text-align:center; margin-bottom:var(--s12)">
+      <div class="s-label" style="justify-content:center">Our Foundations</div>
+      <h2 class="s-title">Six Pillars That Define<br>How We Operate</h2>
+    </div>
+    <div class="pillars-grid">
+      <div class="pillar fade">
+        <div class="pillar-icon">🕌</div>
+        <h3 class="pillar-title">Halal &amp; Culturally Sensitive</h3>
+        <p class="pillar-desc">Every kitchen we operate — in India and Iraq — is Halal-compliant. Gender-sensitive spaces, Islamic etiquette awareness, and prayer-time accommodation are built into our daily operations.</p>
+      </div>
+      <div class="pillar fade fade-d1">
+        <div class="pillar-icon">🌐</div>
+        <h3 class="pillar-title">Multi-Cultural Proficiency</h3>
+        <p class="pillar-desc">Managing guests from 30+ nations at our Iraq properties has given us a rare, lived understanding of multi-cultural hospitality — the single most important capability for Oman's international airport corridor.</p>
+      </div>
+      <div class="pillar fade fade-d2">
+        <div class="pillar-icon">🍽</div>
+        <h3 class="pillar-title">Global Cuisine Portfolio</h3>
+        <p class="pillar-desc">Indian, Punjabi, Continental, Italian, Mexican, Thai, Chinese, Asian Peruvian, Levantine — our menus serve international guests without compromise. Sub-continental to Mediterranean, we have the kitchen teams to match.</p>
+      </div>
+      <div class="pillar fade">
+        <div class="pillar-icon">🏛</div>
+        <h3 class="pillar-title">Large-Scale Event Mastery</h3>
+        <p class="pillar-desc">50 to 500 guests. Weddings, state functions, corporate summits, cultural events, pilgrim gatherings — our event teams have managed every scale and format with consistent excellence.</p>
+      </div>
+      <div class="pillar fade fade-d1">
+        <div class="pillar-icon">♻</div>
+        <h3 class="pillar-title">Sustainable Design Heritage</h3>
+        <p class="pillar-desc">Our JB Group hotels — El Dorado and Urbane — were designed with sustainable architecture principles by Storm Worldwide (NZ), aligned with Oman's Vision 2040 emphasis on responsible, heritage-respectful development.</p>
+      </div>
+      <div class="pillar fade fade-d2">
+        <div class="pillar-icon">🗝</div>
+        <h3 class="pillar-title">Full Operations Management</h3>
+        <p class="pillar-desc">We operate but do not own our Iraq properties — precisely the management contract model we propose for Oman. We bring the system, the people, the standards, and the culture. Our host partner holds the asset.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================================================================
+     CULTURAL ALIGNMENT
+================================================================ -->
+<section>
+  <div class="container">
+    <div class="s-label">Cultural Resonance</div>
+    <h2 class="s-title">Understanding What Oman<br>Expects of Its Guests</h2>
+    <p class="s-sub">Oman's culture values dignity, generosity, authenticity, and depth of experience. Our hospitality philosophy was forged in some of the most culturally demanding environments on earth — from the holy cities of Iraq to the corporate corridors of Ahmedabad.</p>
+    <div class="culture-grid">
+      <div class="culture-card">
+        <div class="culture-img">
+          <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/19/79/36/58/aerotel-muscat.jpg?w=900&h=500&s=1" alt="Airport hospitality in Muscat — welcoming the world" loading="lazy" />
+        </div>
+        <div class="culture-body">
+          <div class="culture-tag">Airport Hospitality</div>
+          <h3 class="culture-title">Welcoming the World at Muscat</h3>
+          <p class="culture-desc">Airport guests are the most diverse imaginable — airline crew, transit travellers, business visitors, religious tourists. Our Iraq experience has prepared us for exactly this: delivering warm, consistent, culturally sensitive service to guests from every nation.</p>
+        </div>
+      </div>
+      <div class="culture-card">
+        <div class="culture-img" style="background:linear-gradient(135deg,#0a1508,#142410);aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;">
+          <div style="text-align:center;padding:var(--s8)">
+            <div style="font-family:var(--f-arabic);font-size:var(--t-2xl);color:var(--emerald-lt);opacity:0.8">الضيافة</div>
+            <div style="font-family:var(--f-display);font-size:var(--t-xs);color:var(--text-faint);letter-spacing:0.2em;margin-top:var(--s3)">DIYAFA · OMANI HOSPITALITY</div>
+          </div>
+        </div>
+        <div class="culture-body">
+          <div class="culture-tag">Shared Values</div>
+          <h3 class="culture-title">Diyafa and Atithi Devo Bhava</h3>
+          <p class="culture-desc">Oman's hospitality tradition — <em>Diyafa</em> — and India's ancient principle — <em>Atithi Devo Bhava</em> (the guest is God) — share the same root: genuine reverence for the guest. We do not treat hospitality as a transaction. We treat it as a sacred duty.</p>
+        </div>
+      </div>
+      <div class="culture-card">
+        <div class="culture-img">
+          <img src="https://restaurantindia.s3.ap-south-1.amazonaws.com/s3fs-public/2025-09/Mann%20%26%20Salwa%20Introduces%20Sora%2C%20a%2011%2C000-Sq-Ft%20Asian%20Peruvian%20Dining%20Concept.jpg" alt="Sora restaurant — global culinary sophistication" loading="lazy" />
+        </div>
+        <div class="culture-body">
+          <div class="culture-tag">Culinary Tourism</div>
+          <h3 class="culture-title">Serving Oman's Gastronomic Vision</h3>
+          <p class="culture-desc">Oman's Ministry has launched a dedicated Culinary Tourism programme, promoting unique food experiences as a pillar of tourism. Our multi-concept restaurant portfolio — from Levantine to sub-continental to fusion — is precisely positioned to contribute to this vision.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================================================================
+     TESTIMONIALS
+================================================================ -->
+<section class="testimonials-band">
+  <div class="container">
+    <div style="text-align:center; margin-bottom:var(--s10)">
+      <div class="s-label" style="justify-content:center">Guest Voices</div>
+      <h2 class="s-title">What Our Guests Say</h2>
+    </div>
+    <div class="test-grid">
+      <div class="test-card">
+        <div class="test-q">"</div>
+        <p class="test-text">First restaurant I have liked. No comparison for the food. Nice services. I had dinner most of the time here with family. No words to say...</p>
+        <div class="test-author">Vikesh Dataniya</div>
+        <div class="test-source">Jungle Bhookh Restaurant, Ahmedabad</div>
+      </div>
+      <div class="test-card">
+        <div class="test-q">"</div>
+        <p class="test-text">Excellent service, housekeeping, friendly and helpful staff, food and care. Made us feel like home — a true home away from home.</p>
+        <div class="test-author">Verified Pilgrim Guest</div>
+        <div class="test-source">Al Najaf Residence, Iraq — via Faize Panjetani</div>
+      </div>
+      <div class="test-card">
+        <div class="test-q">"</div>
+        <p class="test-text">One of the best quality food with good service and reasonable price in a very cozy environment. A truly memorable experience every visit.</p>
+        <div class="test-author">Paras Shah</div>
+        <div class="test-source">Epicurean Alley, Ahmedabad</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================================================================
+     VISION QUOTE BAND — OMANI CULTURE MOMENT
+================================================================ -->
+<div class="vision-band">
+  <div class="vision-pattern" aria-hidden="true"></div>
+  <div class="container vision-content">
+    <div class="khanjar-div"><div class="khanjar-line"></div>
+      <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M4 28 L28 4 M4 4 L28 28" stroke="#c9a84c" stroke-width="1" opacity="0.6"/>
+        <circle cx="16" cy="16" r="4" stroke="#c9a84c" stroke-width="1" opacity="0.6"/>
+      </svg>
+    <div class="khanjar-line"></div></div>
+    <div class="vision-arabic" aria-label="Diyafa — the Omani art of generous hospitality">الضِّيَافَة الْعُمَانِيَّة</div>
+    <blockquote class="vision-quote">
+      "By 2040, we aim for tourism to contribute around <span>10% to Oman's GDP</span> and generate 5 to 8 million jobs for both Omanis and expatriates."
+    </blockquote>
+    <p class="vision-attr">H.E. Salim M. Al Mahruqi · Minister of Heritage and Tourism, Sultanate of Oman</p>
+  </div>
+</div>
+
+<!-- ================================================================
+     PROPOSAL SECTION
+================================================================ -->
+<section class="offer-section" id="proposal">
+  <div class="container">
+    <div class="s-label">Our Proposal</div>
+    <h2 class="s-title">What We Are<br><em class="gold">Formally Proposing</em></h2>
+    <p class="s-sub">We present this proposal to the Ministry of Heritage and Tourism and relevant Omani authorities, offering our hospitality management capabilities, our international credentials, and our sincere interest in contributing to the Sultanate's Vision 2040 hospitality ambitions.</p>
+
+    <div class="offer-grid">
+      <div class="offer-list">
+        <div class="offer-item">
+          <div class="offer-num">01</div>
+          <div class="offer-text">
+            <h4>Proven International Management</h4>
+            <p>We have managed three internationally positioned properties in Iraq's Holy Cities since 2016 — serving guests from 30+ nations. This is not theoretical capability; it is an operational track record.</p>
+          </div>
+        </div>
+        <div class="offer-item">
+          <div class="offer-num">02</div>
+          <div class="offer-text">
+            <h4>Full Halal Operations Readiness</h4>
+            <p>Every kitchen we run is Halal-compliant. We operate gender-sensitive spaces, accommodate prayer-time requirements, and serve both vegetarian and non-vegetarian Halal food — from Day One.</p>
+          </div>
+        </div>
+        <div class="offer-item">
+          <div class="offer-num">03</div>
+          <div class="offer-text">
+            <h4>Complete Operations — Excluding Ownership</h4>
+            <p>Just as we manage the Iraq properties without owning them, we propose to bring full operational capability to an Oman property under a management arrangement. The Omani partner owns; we operate with excellence.</p>
+          </div>
+        </div>
+        <div class="offer-item">
+          <div class="offer-num">04</div>
+          <div class="offer-text">
+            <h4>Multi-Cuisine Kitchen Expertise</h4>
+            <p>Deployment-ready menus spanning Indian, Continental, Levantine, Asian, and fusion cuisines — calibrated to serve the international visitor profile of Muscat International Airport.</p>
+          </div>
+        </div>
+        <div class="offer-item">
+          <div class="offer-num">05</div>
+          <div class="offer-text">
+            <h4>Trained Hospitality Teams</h4>
+            <p>Our Iraq operations have trained and managed front-of-house, kitchen, and housekeeping teams across cultures. We can deploy experienced personnel or train local Omani staff to our standards.</p>
+          </div>
+        </div>
+        <div class="offer-item">
+          <div class="offer-num">06</div>
+          <div class="offer-text">
+            <h4>CEPA-Backed Legal Framework</h4>
+            <p>The India–Oman CEPA provides a clear, Government-endorsed legal pathway for Indian hospitality companies to operate in Oman. We are ready to formalise a structure as soon as dialogue begins.</p>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div class="s-label" style="margin-bottom:var(--s4)">Proposed Arrangements</div>
+        <h3 class="s-title" style="font-size:var(--t-xl); margin-bottom:var(--s8)">How We Might<br>Work Together</h3>
+        <div class="models-grid">
+          <div class="model-card feat">
+            <div class="model-title">Management Contract</div>
+            <p class="model-desc">We operate and manage a new hospitality facility near Muscat International Airport. The Omani authority or investor owns the asset; we bring the full operating system, staff, and brand standards.</p>
+          </div>
+          <div class="model-card">
+            <div class="model-title">Joint Venture</div>
+            <p class="model-desc">Establish a jointly held entity under the CEPA FDI framework. We contribute operational expertise, established management systems, and culinary concepts. The Omani partner contributes location and regulatory facilitation.</p>
+          </div>
+          <div class="model-card">
+            <div class="model-title">Concept Licensing</div>
+            <p class="model-desc">License our established restaurant concepts — Jungle Bhookh, La Serata, Epitome, The Primo — for operation by an Omani licensee with our full brand, recipe, and operational support.</p>
+          </div>
+          <div class="model-card">
+            <div class="model-title">Advisory &amp; Technical</div>
+            <p class="model-desc">Provide structured consulting: staff training, menu development, hospitality systems, kitchen setup, and quality standards — for an Omani operator seeking to raise the bar.</p>
+          </div>
+        </div>
+
+        <div class="airport-box">
+          <div class="airport-box-label">Priority Interest</div>
+          <h4 class="airport-box-title">Muscat International Airport Corridor</h4>
+          <p class="airport-box-desc">We are specifically interested in restaurant, café, and hotel management opportunities within the Muscat Airport zone and any upcoming integrated hospitality development in its vicinity. With 13.2 million annual passengers — and the government's expression of interest for the old terminal redevelopment — this is the single highest-potential location for our capabilities.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="orn-div container"><div class="orn-line"></div><div class="orn-center">✦</div><div class="orn-line"></div></div>
+
+<!-- ================================================================
+     CTA / CONTACT
+================================================================ -->
+<section class="cta-sect" id="contact">
+  <div class="container container--def">
+    <div class="cta-box">
+      <div class="s-label" style="justify-content:center; margin-bottom:var(--s6)">Initiate Dialogue</div>
+      <h2 class="cta-title">WE RESPECTFULLY INVITE<br>YOUR CONSIDERATION</h2>
+      <p class="cta-sub">
+        We present this proposal with the highest regard for the Ministry of Heritage and Tourism and for the Sultanate of Oman. We welcome any form of engagement — a preliminary meeting, a site visit to our India or Iraq properties, or a formal response at the Ministry's convenience.
+      </p>
+
+      <div class="cta-contacts">
+        <div class="contact-item">
+          <span class="contact-label">Group Base</span>
+          <span class="contact-value">Ahmedabad, Gujarat, India</span>
+        </div>
+        <div class="cta-divider"></div>
+        <div class="contact-item">
+          <span class="contact-label">Primary Contact</span>
+          <span class="contact-value">kasimalidauwa@gmail.com</span>
+        </div>
+        <div class="cta-divider"></div>
+        <div class="contact-item">
+          <span class="contact-label">International Operations</span>
+          <span class="contact-value">Iraq · India · Proposed: Oman</span>
+        </div>
+      </div>
+
+      <div>
+        <a href="mailto:lalnco.com@gmail.com?subject=Oman Proposal — Ministry Enquiry&body=Dear Hospitality Group,%0D%0A%0D%0AThank you for your formal proposal. We would like to initiate a discussion.%0D%0A%0D%0ARegards" class="btn-primary">Initiate Formal Dialogue</a>
+        <a href="#international" class="btn-secondary">Review International Credentials</a>
+      </div>
+
+      <div class="ref-grid">
+        <a href="https://mht.gov.om" target="_blank" rel="noopener" class="ref-link">
+          <span class="ref-label">Ministry</span>
+          <span class="ref-name">Ministry of Heritage &amp; Tourism, Oman</span>
+          <span class="ref-url">mht.gov.om ↗</span>
+        </a>
+        <a href="https://faizepanjetani.com" target="_blank" rel="noopener" class="ref-link">
+          <span class="ref-label">Our Iraq Operations</span>
+          <span class="ref-name">Faize Panjetani — Pilgrim Residences</span>
+          <span class="ref-url">faizepanjetani.com ↗</span>
+        </a>
+        <a href="https://cavendishmaxwell.com/insights/market-reports/hospitality/oman-hospitality-market-performance-2025" target="_blank" rel="noopener" class="ref-link">
+          <span class="ref-label">Market Data</span>
+          <span class="ref-name">Oman Hospitality Market 2025</span>
+          <span class="ref-url">Cavendish Maxwell ↗</span>
+        </a>
+        <a href="https://www.mea.gov.in/bilateral-documents.htm?dtl%2F40518" target="_blank" rel="noopener" class="ref-link">
+          <span class="ref-label">CEPA</span>
+          <span class="ref-name">India–Oman Joint Statement, Dec 2025</span>
+          <span class="ref-url">Ministry of External Affairs ↗</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================================================================
+     FOOTER
+================================================================ -->
+<footer>
+  <div>
+    <div class="footer-brand">JB Hospitality Group</div>
+    <p class="footer-copy">© 2026 · Ahmedabad, Gujarat, India · kasimalidauwa@gmail.com</p>
+  </div>
+</footer>
+
+<div class="flag-stripe"></div>
+
+<!-- ================================================================
+     JAVASCRIPT
+================================================================ -->
+<script>
+  // Tab switching
+  function switchTab(e, id) {
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+    e.target.classList.add('active');
+    document.getElementById('tab-' + id).classList.add('active');
+  }
+
+  // Scroll fade-in
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+  document.querySelectorAll('.fade').forEach(el => io.observe(el));
+
+  // Nav shadow on scroll
+  const navEl = document.querySelector('nav');
+  window.addEventListener('scroll', () => {
+    navEl.style.boxShadow = window.scrollY > 8 ? '0 2px 24px rgba(0,0,0,0.6)' : 'none';
+  });
+</script>
+
+<script data-pplx-inline-edit>
+(function () {
+  if (window === window.top) return;
+
+  const allowedParentOrigins = ["https://www.perplexity.ai","https://perplexity.ai","https://testing.perplexity.ai","https://staging.perplexity.ai","https://*.preview.i.perplexity.ai","http://localhost:3000","http://127.0.0.1:3000","http://localhost:5173","http://127.0.0.1:5173"];
+  const MAX_FONT_BYTES = 500 * 1024;
+  const MAX_TOTAL_FONT_BYTES = 2 * 1024 * 1024;
+  let scrollForwarding = false;
+  let scrollRaf = 0;
+  let trustedTopOrigin = null;
+
+  // Allow entries like "https://*.preview.i.perplexity.ai" — the wildcard
+  // matches a single DNS label (no dots), so "https://*.foo" cannot stretch
+  // across multiple labels.
+  function matchesAllowedOrigin(origin) {
+    if (!origin) return false;
+    for (const entry of allowedParentOrigins) {
+      if (!entry.includes("*")) {
+        if (entry === origin) return true;
+        continue;
+      }
+      const pattern = new RegExp(
+        "^" +
+          entry.replace(/[.+?^${}()|[\]\\]/g, "\\$&").replace(/\*/g, "[^.]+") +
+          "$",
+      );
+      if (pattern.test(origin)) return true;
+    }
+    return false;
+  }
+
+  // Trust decision: when the sender is same-origin-visible (event.origin is a
+  // real origin like https://www.perplexity.ai) we trust event.origin directly.
+  // When event.origin is "null" (opaque broker srcdoc), we fall back to the
+  // broker's stamped `parentOrigin` to identify the top window. The fallback
+  // is claim-only — we rely on the browser's native `targetOrigin` enforcement
+  // on the response path (see postToTrustedTop) to ensure replies can't be
+  // delivered to anyone but the actual top window of that claimed origin.
+  function getTrustedParentOrigin(event) {
+    const forwardedParentOrigin =
+      typeof event.data.parentOrigin === "string" ? event.data.parentOrigin : null;
+    const parentOrigin = event.origin === "null" ? forwardedParentOrigin : event.origin;
+    return matchesAllowedOrigin(parentOrigin) ? parentOrigin : null;
+  }
+
+  // All responses go to window.top with targetOrigin = the allowlisted origin.
+  // An attacker that iframes us inside their own null-origin broker can claim
+  // any parentOrigin they like, but the browser will drop the reply whenever
+  // the real top's origin doesn't match — so the screenshot never leaves.
+  function postToTrustedTop(message) {
+    if (!trustedTopOrigin) return;
+    try {
+      window.top.postMessage(message, trustedTopOrigin);
+    } catch (_error) {}
+  }
+
+  function inlineAll(original, clone) {
+    if (original.nodeType !== 1 || clone.nodeType !== 1) return;
+
+    try {
+      const computedStyle = getComputedStyle(original);
+      // cssText on a computed style is the serialized declaration in modern
+      // Chromium/Safari — a single read beats enumerating ~400 longhand
+      // properties. Firefox returns "" here, so we fall back on empty.
+      const serialized = computedStyle.cssText;
+      if (serialized) {
+        clone.style.cssText = serialized;
+      } else {
+        const parts = new Array(computedStyle.length);
+        for (let index = 0; index < computedStyle.length; index += 1) {
+          const property = computedStyle[index];
+          parts[index] = `${property}:${computedStyle.getPropertyValue(property)};`;
+        }
+        clone.style.cssText = parts.join("");
+      }
+    } catch (_error) {}
+
+    const originalChildren = original.children;
+    const clonedChildren = clone.children;
+    for (
+      let index = 0;
+      index < originalChildren.length && index < clonedChildren.length;
+      index += 1
+    ) {
+      inlineAll(originalChildren[index], clonedChildren[index]);
+    }
+  }
+
+  function extractFontUrl(srcValue) {
+    const matches = [
+      ...srcValue.matchAll(
+        /url\(["']?([^"')]+)["']?\)(?:\s*format\(["']?([^"')]+)["']?\))?/gi,
+      ),
+    ];
+    if (matches.length === 0) return null;
+    const woff2 = matches.find((m) => m[2] && m[2].toLowerCase().includes("woff2"));
+    if (woff2) return woff2[1];
+    const woff = matches.find((m) => m[2] && m[2].toLowerCase().includes("woff"));
+    if (woff) return woff[1];
+    return matches[0][1];
+  }
+
+  // Cache resolved font URL -> data URI across captures. Fonts on a page
+  // essentially never change, and a batch run emits multiple captures back to
+  // back — without this we'd refetch + re-base64 every time.
+  const fontDataUriCache = new Map();
+  const SRC_DECLARATION_RE = /src\s*:\s*[^;}]+/i;
+
+  async function fetchAsDataUri(url) {
+    if (fontDataUriCache.has(url)) return fontDataUriCache.get(url);
+    let dataUri = null;
+    try {
+      const response = await fetch(url, { mode: "cors", credentials: "omit" });
+      if (response.ok) {
+        const blob = await response.blob();
+        if (blob.size <= MAX_FONT_BYTES) {
+          dataUri = await new Promise((resolve) => {
+            const reader = new FileReader();
+            reader.onloadend = () =>
+              resolve(typeof reader.result === "string" ? reader.result : null);
+            reader.onerror = () => resolve(null);
+            reader.readAsDataURL(blob);
+          });
+        }
+      }
+    } catch (_error) {
+      dataUri = null;
+    }
+    fontDataUriCache.set(url, dataUri);
+    return dataUri;
+  }
+
+  function collectFontFaceRuleTexts() {
+    const rules = [];
+    for (const sheet of document.styleSheets) {
+      let cssRules;
+      try {
+        cssRules = sheet.cssRules;
+      } catch (_error) {
+        continue;
+      }
+      if (!cssRules) continue;
+      for (const rule of cssRules) {
+        const cssText = rule.cssText || "";
+        if (cssText.startsWith("@font-face")) rules.push(cssText);
+      }
+    }
+    return rules;
+  }
+
+  async function buildInlinedFontCss() {
+    const ruleTexts = collectFontFaceRuleTexts();
+    if (ruleTexts.length === 0) return null;
+
+    const resolved = ruleTexts.map((cssText) => {
+      if (!SRC_DECLARATION_RE.test(cssText)) return null;
+      const srcMatch = cssText.match(/src\s*:\s*([^;}]+)[;}]/i);
+      if (!srcMatch) return null;
+      const url = extractFontUrl(srcMatch[1]);
+      if (!url) return null;
+      try {
+        return { cssText, url: new URL(url, document.baseURI).href };
+      } catch (_error) {
+        return null;
+      }
+    });
+
+    const dataUris = await Promise.all(
+      resolved.map((entry) => (entry ? fetchAsDataUri(entry.url) : Promise.resolve(null))),
+    );
+
+    const inlined = [];
+    let totalBytes = 0;
+    for (let index = 0; index < resolved.length; index += 1) {
+      const entry = resolved[index];
+      const dataUri = dataUris[index];
+      if (!entry || !dataUri) continue;
+      const approxBytes = dataUri.length * 0.75;
+      if (totalBytes + approxBytes > MAX_TOTAL_FONT_BYTES) break;
+      totalBytes += approxBytes;
+      inlined.push(entry.cssText.replace(SRC_DECLARATION_RE, `src: url("${dataUri}")`));
+    }
+    return inlined.length > 0 ? inlined.join("\n") : null;
+  }
+
+  function stripExternal(clone) {
+    const images = clone.querySelectorAll("img");
+    for (let index = 0; index < images.length; index += 1) {
+      const src = images[index].getAttribute("src");
+      if (src && !src.startsWith("data:")) images[index].removeAttribute("src");
+    }
+
+    const elements = clone.querySelectorAll("*");
+    for (let index = 0; index < elements.length; index += 1) {
+      const style = elements[index].style.cssText;
+      if (style && style.includes("url(")) {
+        elements[index].style.cssText = style.replace(
+          /url\(["']?(?!data:)[^)"']*["']?\)/gi,
+          "none",
+        );
+      }
+    }
+  }
+
+  function emitScroll() {
+    scrollRaf = 0;
+    if (!scrollForwarding) return;
+    postToTrustedTop({
+      type: "INLINE_EDIT_SCROLL",
+      scrollX: window.scrollX,
+      scrollY: window.scrollY,
+    });
+  }
+
+  window.addEventListener(
+    "scroll",
+    function () {
+      if (!scrollForwarding || scrollRaf) return;
+      scrollRaf = requestAnimationFrame(emitScroll);
+    },
+    { passive: true, capture: true },
+  );
+
+  async function handleCaptureRequest(event) {
+    const requestId = event.data.requestId;
+    const scrollX = window.scrollX;
+    const scrollY = window.scrollY;
+    const width = window.innerWidth;
+    const height = window.innerHeight;
+
+    function postResult(dataUrl) {
+      postToTrustedTop({
+        type: "INLINE_EDIT_SCREENSHOT_RESULT",
+        requestId,
+        dataUrl,
+        scrollX,
+        scrollY,
+      });
+    }
+
+    try {
+      // Wait for any pending web fonts to resolve so both inline metrics and
+      // the @font-face inlining below see the same loaded faces.
+      if (document.fonts && document.fonts.ready) {
+        try {
+          await document.fonts.ready;
+        } catch (_error) {}
+      }
+
+      const clone = document.documentElement.cloneNode(true);
+      inlineAll(document.documentElement, clone);
+
+      const removedNodes = clone.querySelectorAll("script,link[rel=\"stylesheet\"],style");
+      for (let index = 0; index < removedNodes.length; index += 1) {
+        removedNodes[index].remove();
+      }
+
+      stripExternal(clone);
+
+      // Re-embed web fonts as data-URI @font-face rules so the SVG rasterizer
+      // can resolve them — external font URLs aren't fetched during
+      // foreignObject rendering, which would otherwise force a fallback face
+      // and change text metrics.
+      const inlinedFontCss = await buildInlinedFontCss();
+      if (inlinedFontCss) {
+        const styleEl = document.createElement("style");
+        styleEl.textContent = inlinedFontCss;
+        const head = clone.querySelector("head");
+        if (head) head.appendChild(styleEl);
+        else clone.insertBefore(styleEl, clone.firstChild);
+      }
+
+      const html = new XMLSerializer().serializeToString(clone);
+      const svg =
+        `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}">` +
+        '<foreignObject width="100%" height="100%">' +
+        `<div xmlns="http://www.w3.org/1999/xhtml" style="width:${width}px;height:${height}px;overflow:hidden">` +
+        `<div style="transform:translate(-${scrollX}px,-${scrollY}px);transform-origin:top left">` +
+        html +
+        "</div></div></foreignObject></svg>";
+      const svgUrl = `data:image/svg+xml;charset=utf-8,${encodeURIComponent(svg)}`;
+      const image = new Image();
+      image.onload = function () {
+        const canvas = document.createElement("canvas");
+        canvas.width = width;
+        canvas.height = height;
+        canvas.getContext("2d").drawImage(image, 0, 0);
+        postResult(canvas.toDataURL("image/png"));
+      };
+      image.onerror = function () {
+        postResult(null);
+      };
+      image.src = svgUrl;
+    } catch (_error) {
+      postResult(null);
+    }
+  }
+
+  window.addEventListener("message", function (event) {
+    if (!event.data) return;
+    // Only accept messages from the direct parent frame. Blocks sibling /
+    // unrelated-window postMessage senders that could otherwise reach us.
+    if (event.source !== window.parent) return;
+
+    const trustedParentOrigin = getTrustedParentOrigin(event);
+    if (!trustedParentOrigin) return;
+    trustedTopOrigin = trustedParentOrigin;
+
+    if (event.data.type === "INLINE_EDIT_SCROLL_START") {
+      scrollForwarding = true;
+      emitScroll();
+      return;
+    }
+
+    if (event.data.type === "INLINE_EDIT_SCROLL_STOP") {
+      scrollForwarding = false;
+      if (scrollRaf) cancelAnimationFrame(scrollRaf);
+      scrollRaf = 0;
+      return;
+    }
+
+    if (event.data.type !== "INLINE_EDIT_CAPTURE_REQUEST") return;
+
+    handleCaptureRequest(event);
+  });
+})();
+
+
+</script></body>
+</html>
